@@ -242,6 +242,24 @@ body {
     padding: 0.45rem;
   }
 }
+.botao-guardar {
+  margin-top: 1rem;
+  width: 220px;
+  padding: 0.6rem 1rem;
+  background-color: var(--cor-laranja);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Segoe UI','Roboto','Open Sans',sans-serif;
+  transition: background-color 0.3s;
+}
+
+.botao-guardar:hover {
+  background-color: var(--cor-cinzento);
+}
 
 </style>
 
@@ -357,195 +375,44 @@ body {
    <main class="content">
 
   <h2 style="color: var(--cor-laranja); margin-bottom: 1rem;">
-    TravelX – Explora e planeia a tua viagem
+    Preferências
   </h2>
 
-  <div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
-    <input type="text" placeholder="Pesquisar..." style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; width: 200px;">
-    <button style="margin-left: 0.5rem; padding: 0.5rem 1rem; background-color: var(--cor-laranja); color: white; border: none; border-radius: 4px; cursor: pointer;">Procurar</button>
-  </div>
+  <div style="background-color: var(--cor-secundaria); border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: flex; flex-direction: column; gap: 1.5rem; font-family: 'Segoe UI','Roboto','Open Sans',sans-serif;">
 
-  <p style="margin-bottom: 2rem; font-size: 0.95rem; color: #333;">
-    Descobre mais opções para a tua viagem: sugestão de atividades, sugestão de lugares, coisas para fazer, experiências, atrações e destaques.
-  </p>
-
-  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
-
-    <div class="card">
-      <img src="cultura.png" alt="Teatro" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Teatro</div>
-      <div class="card-content">Preço: 10€ – 20€</div>
+    <div>
+      <label style="font-weight: 600; color: var(--cor-terciaria);">Idioma</label>
+      <select style="margin-top: 0.4rem; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; width: 220px; font-family: inherit;">
+        <option value="pt">Português</option>
+        <option value="en">Inglês</option>
+      </select>
     </div>
 
-    <div class="card">
-      <img src="bowling.png" alt="Bowling" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Bowling</div>
-      <div class="card-content">Preço: 5€ – 8€</div>
+    <div>
+      <label style="font-weight: 600; color: var(--cor-terciaria);">Tema</label>
+      <select style="margin-top: 0.4rem; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; width: 220px; font-family: inherit;">
+        <option value="claro">Claro</option>
+        <option value="escuro">Escuro</option>
+      </select>
     </div>
 
-    <div class="card">
-      <img src="carreiros.png" alt="Carreiros do Monte" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Carreiros do Monte</div>
-      <div class="card-content">Preço: 27,50€</div>
+    <div>
+      <label style="font-weight: 600; color: var(--cor-terciaria);">Moeda para pagamento</label>
+      <select style="margin-top: 0.4rem; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; width: 220px; font-family: inherit;">
+        <option value="eur">Euro (€)</option>
+        <option value="usd">Dólar ($)</option>
+        <option value="gbp">Libra (£)</option>
+      </select>
     </div>
 
-    <div class="card">
-      <img src="padel.png" alt="Padel" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Padel</div>
-      <div class="card-content">Preço: 12€ – 20€</div>
-    </div>
+    <button class="botao-guardar">Guardar</button>
 
-    <div class="card">
-      <img src="parapente.png" alt="Parapente" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Parapente</div>
-      <div class="card-content">Preço: 90€ – 120€</div>
-    </div>
-
-    <div class="card">
-      <img src="4x4.png" alt="Passeio 4x4" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Passeio 4x4</div>
-      <div class="card-content">Preço: 35€ – 50€</div>
-    </div>
-
-    <div class="card">
-      <img src="levadas.png" alt="Levada – 25 Fontes" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Levada – 25 Fontes</div>
-      <div class="card-content">Preço: 35€ – 45€</div>
-    </div>
-
-    <div class="card">
-      <img src="golfinho.png" alt="Observação de Golfinhos" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Observação de Golfinhos</div>
-      <div class="card-content">Preço: 35€ – 45€</div>
-    </div>
-
-    <div class="card">
-      <img src="picodoariero.png" alt="Pico do Areeiro" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Pico do Areeiro</div>
-      <div class="card-content">Preço: Gratuito</div>
-    </div>
-
-    <div class="card">
-      <img src="cabogirao.png" alt="Cabo Girão" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Cabo Girão</div>
-      <div class="card-content">Preço: Gratuito</div>
-    </div>
-
-    <div class="card">
-      <img src="mercadolavradores.png" alt="Mercado dos Lavradores" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Mercado dos Lavradores</div>
-      <div class="card-content">Preço: Entrada gratuita</div>
-    </div>
-
-    <div class="card">
-      <img src="portosanto.png" alt="Porto Santo" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Porto Santo</div>
-      <div class="card-content">Preço: 50€ – 60€</div>
-    </div>
 
   </div>
-
-<div style="margin-top: 3rem; text-align: center;">
-
-  <div style="font-size: 1.4rem; color: var(--cor-terciaria); margin-bottom: 1.5rem;">
-    Não sabes o que fazer? Clica no botão para gerar sozinho um roteiro de um dia para ti!
-  </div>
-
-  <button onclick="gerarRoteiro()" style="padding: 0.6rem 1.2rem; background-color: var(--cor-laranja); color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">
-    Gerar Roteiro Aleatório
-  </button>
-
-  <div id="roteiro-container" style="display: none; margin-top: 2rem;">
-
-    <h3 style="color: var(--cor-laranja); margin-bottom: 1rem; text-align: center;">
-      Exemplo de um roteiro só para ti!
-    </h3>
-
-    <div id="roteiro-cards" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;"></div>
-
-  </div>
-
-</div>
-
-<script>
-  function gerarRoteiro() {
-    const experiencias = [
-      { img: "cultura.png", titulo: "Teatro", tipo: "curta", preco: "10€ – 20€" },
-      { img: "bowling.png", titulo: "Bowling", tipo: "curta", preco: "5€ – 8€" },
-      { img: "carreiros.png", titulo: "Carreiros do Monte", tipo: "curta", preco: "27,50€" },
-      { img: "padel.png", titulo: "Padel", tipo: "media", preco: "12€ – 20€" },
-      { img: "parapente.png", titulo: "Parapente", tipo: "media", preco: "90€ – 120€" },
-      { img: "4x4.png", titulo: "Passeio 4x4", tipo: "media", preco: "35€ – 50€" },
-      { img: "levadas.png", titulo: "Levada – 25 Fontes", tipo: "longa", preco: "35€ – 45€" },
-      { img: "golfinho.png", titulo: "Observação de Golfinhos", tipo: "curta", preco: "35€ – 45€" },
-      { img: "picodoariero.png", titulo: "Pico do Areeiro", tipo: "curta", preco: "Gratuito" },
-      { img: "cabogirao.png", titulo: "Cabo Girão", tipo: "curta", preco: "Gratuito" },
-      { img: "mercadolavradores.png", titulo: "Mercado dos Lavradores", tipo: "curta", preco: "Entrada gratuita" },
-      { img: "portosanto.png", titulo: "Porto Santo", tipo: "exclusivo", preco: "50€ – 60€" }
-    ];
-
-    const selecionadas = [];
-    const portoSanto = experiencias.find(e => e.tipo === "exclusivo");
-
-    if (Math.random() < 0.15) {
-      selecionadas.push(portoSanto);
-    } else {
-      const curtas = experiencias.filter(e => e.tipo === "curta");
-      const medias = experiencias.filter(e => e.tipo === "media");
-      const longas = experiencias.filter(e => e.tipo === "longa");
-      const shuffle = arr => arr.sort(() => Math.random() - 0.5);
-
-      if (Math.random() < 0.25) {
-        const longa = shuffle(longas)[0];
-        selecionadas.push(longa);
-        selecionadas.push(...shuffle(curtas).slice(0, 1));
-      } else if (Math.random() < 0.55) {
-        const media = shuffle(medias)[0];
-        selecionadas.push(media);
-        selecionadas.push(...shuffle(curtas).slice(0, 2));
-      } else {
-        selecionadas.push(...shuffle(curtas).slice(0, 4));
-      }
-    }
-
-    const container = document.getElementById("roteiro-cards");
-    container.innerHTML = "";
-
-    const bloco = document.getElementById("roteiro-container");
-    bloco.style.display = "block";
-
-    const frase = document.querySelector("#roteiro-container h3");
-
-    if (selecionadas.length === 1 && selecionadas[0].titulo === "Porto Santo") {
-      frase.innerText = "Podes tirar um dia inteiro para relaxar nas praias douradas de Porto Santo!";
-    } else if (selecionadas.length === 2) {
-      frase.innerText = "Um dia leve e tranquilo com duas experiências únicas para ti!";
-    } else if (selecionadas.length === 3) {
-      frase.innerText = "Três atividades que encaixam perfeitamente num dia cheio de descobertas!";
-    } else {
-      frase.innerText = "Exemplo de um roteiro só para ti!";
-    }
-
-    container.style.display = "grid";
-    container.style.gridTemplateColumns = "repeat(4, 1fr)";
-    container.style.justifyItems = "center";
-    container.style.gap = "1.5rem";
-
-    selecionadas.forEach(exp => {
-      container.innerHTML += `
-        <div class="card">
-          <img src="${exp.img}" style="width: 100%; border-radius: 6px;">
-          <div class="card-title">${exp.titulo}</div>
-          <div class="card-content">Preço: ${exp.preco}</div>
-        </div>
-      `;
-    });
-  }
-</script>
-
-
 
 </main>
+
+
 </div>
 <footer style="background-color: #f0f0f0; padding: 32px; font-size: 13px; color: #333; border-top: 1px solid #ccc;">
   <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: start;">
