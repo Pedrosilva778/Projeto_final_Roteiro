@@ -676,24 +676,34 @@ body {
 
 </main>
 <script>
-  function adicionarCarrinho(atividade) {
-    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-    carrinho.push(atividade);
-    localStorage.setItem("carrinho", JSON.stringify(carrinho));
-    alert(atividade + " foi adicionada ao carrinho.");
+ function adicionarCarrinho(nome) {
+  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+  if (carrinho.includes(nome)) {
+    alert(`${nome} já está no carrinho.`);
+    return;
   }
 
-  function adicionarFavoritos(atividade) {
-    let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-    if (!favoritos.includes(atividade)) {
-      favoritos.push(atividade);
-      localStorage.setItem("favoritos", JSON.stringify(favoritos));
-      alert(atividade + " foi adicionada aos favoritos.");
-    } else {
-      alert("Esta atividade já está nos favoritos.");
-    }
+  carrinho.push(nome);
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  alert(`${nome} foi adicionado ao carrinho.`);
+}
+
+ function adicionarFavoritos(nome) {
+  const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+  if (favoritos.includes(nome)) {
+    alert(`${nome} já está nos favoritos.`);
+    return;
   }
+
+  favoritos.push(nome);
+  localStorage.setItem('favoritos', JSON.stringify(favoritos));
+  alert(`${nome} foi adicionado aos favoritos.`);
+}
+
 </script>
+
 
 
 

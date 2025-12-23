@@ -408,256 +408,263 @@ body {
     <button class="botao-guardar" style="margin-left: 0.5rem;">Pesquisar</button>
   </div>
 
-  <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Coisas para fazer no Funchal!</h3>
+  <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Coisas para fazer no norte da Ilha da Madeira!</h3>
 
   <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 
   
- <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="museucr7.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Museu CR7</div>
+ <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="saovicente.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Arraial de São Vicente</div>
 
-  <input type="checkbox" id="toggle-museucr7" class="accordion-checkbox" hidden>
-  <label for="toggle-museucr7" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-saovicente" class="accordion-checkbox" hidden>
+  <label for="toggle-saovicente" class="accordion-toggle">Ver detalhes</label>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Troféus oficiais do Cristiano Ronaldo</li>
-          <li>Experiência multimédia</li>
-          <li>Local icónico no Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Museu dedicado à carreira de Cristiano Ronaldo, com troféus, vídeos e memorabilia exclusiva.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Exposições → Zona multimédia → Loja → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Entrada no museu</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 1h</li>
-          <li>Localização: Centro do Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-          <li>Miradouro Pico dos Barcelos</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 15€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Museu CR7')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Museu CR7')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Um dos arraiais mais tradicionais da costa norte, com música, comida típica e ambiente local autêntico.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Atividades</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Bailinho da Madeira</li>
+        <li>Comida típica</li>
+        <li>Procissão e festa popular</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="maria5.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Maria:</strong> Ambiente super acolhedor!</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="joao5.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>João:</strong> Música tradicional no seu melhor.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="carla5.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Carla:</strong> Ótima comida e muita animação.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>É pago?</strong> Não.</div>
+        <div><strong>Quando é?</strong> Agosto.</div>
+        <div><strong>Tem estacionamento?</strong> Sim, mas enche rápido.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Arraial de São Vicente')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Arraial de São Vicente')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
 
 
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="arraialmonte.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Arraial do Monte</div>
 
+  <input type="checkbox" id="toggle-arraialmonte" class="accordion-checkbox" hidden>
+  <label for="toggle-arraialmonte" class="accordion-toggle">Ver detalhes</label>
 
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="telefericofunchal.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Teleférico do Funchal</div>
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-  <input type="checkbox" id="toggle-telefericofunchal" class="accordion-checkbox" hidden>
-  <label for="toggle-telefericofunchal" class="accordion-toggle">Ver detalhes</label>
-
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
-
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Vista aérea sobre o Funchal</li>
-          <li>Viagem panorâmica</li>
-          <li>Ligação direta ao Monte</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Um dos teleféricos mais famosos da Madeira, com vistas incríveis sobre a baía e o centro do Funchal.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Funchal → Monte (viagem panorâmica).</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Bilhete de teleférico</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 15 min</li>
-          <li>Localização: Centro do Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-          <li>Miradouro das Neves</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 18€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Teleférico do Funchal')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Teleférico do Funchal')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Um dos maiores e mais populares arraiais da Madeira, com milhares de visitantes e muita animação.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Atividades</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Bailinho da Madeira</li>
+        <li>Comida típica</li>
+        <li>Procissão e festa religiosa</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="joana3.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Joana:</strong> Festa gigante e super animada!</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="miguel3.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Miguel:</strong> A espetada é obrigatória.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="carla3.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Carla:</strong> Um dos melhores arraiais da ilha.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>É pago?</strong> Não.</div>
+        <div><strong>Quando é?</strong> Agosto.</div>
+        <div><strong>É muito cheio?</strong> Sim, especialmente à noite.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Arraial do Monte')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Arraial do Monte')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
-
-
-
-
 
 
 
     
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="jardimmontepalace.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Jardim Tropical Monte Palace</div>
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="festaflor.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Festa da Flor</div>
 
-  <input type="checkbox" id="toggle-montepalace" class="accordion-checkbox" hidden>
-  <label for="toggle-montepalace" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-festaflor" class="accordion-checkbox" hidden>
+  <label for="toggle-festaflor" class="accordion-toggle">Ver detalhes</label>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Jardins exóticos e lagoas</li>
-          <li>Arte africana e azulejos históricos</li>
-          <li>Vistas incríveis sobre o Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Um dos jardins mais bonitos da Madeira, com coleções botânicas, arte internacional e paisagens únicas.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Jardins → Lagoas → Museu → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Acesso ao jardim</li>
-          <li>Acesso ao museu</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 1h30 – 2h</li>
-          <li>Localização: Monte (acesso pelo teleférico do Funchal)</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Teleférico do Funchal</li>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 15€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Jardim Tropical Monte Palace')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Jardim Tropical Monte Palace')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Um dos eventos mais emblemáticos da Madeira, com tapetes florais, cortejo e exposições de flores.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Atividades</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Cortejo da Flor</li>
+        <li>Tapetes florais</li>
+        <li>Exposições e mercados</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="sofia6.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Sofia:</strong> O cortejo é lindíssimo!</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ricardo6.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ricardo:</strong> As flores são incríveis.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="maria6.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Maria:</strong> Evento muito bonito e organizado.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>É pago?</strong> Não.</div>
+        <div><strong>Quando é?</strong> Maio.</div>
+        <div><strong>O cortejo é gratuito?</strong> Sim.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Festa da Flor')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Festa da Flor')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
 
 
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="semanadomar.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Semana do Mar — Porto Moniz</div>
 
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="museunatural.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Museu de História Natural do Funchal</div>
+  <input type="checkbox" id="toggle-semanamar" class="accordion-checkbox" hidden>
+  <label for="toggle-semanamar" class="accordion-toggle">Ver detalhes</label>
 
-  <input type="checkbox" id="toggle-museunatural" class="accordion-checkbox" hidden>
-  <label for="toggle-museunatural" class="accordion-toggle">Ver detalhes</label>
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
-
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Fauna e flora da Madeira</li>
-          <li>Exposições educativas</li>
-          <li>Local histórico no centro</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Museu dedicado à biodiversidade da Madeira, com coleções de animais, plantas e minerais.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Exposições → Sala temática → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Entrada no museu</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 45 min</li>
-          <li>Localização: Centro do Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-          <li>Miradouro das Neves</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 3€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Museu de História Natural do Funchal')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Museu de História Natural do Funchal')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Evento dedicado ao mar, com concertos, gastronomia, atividades náuticas e muita animação junto às piscinas naturais.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Atividades</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Concertos ao vivo</li>
+        <li>Comida típica</li>
+        <li>Atividades náuticas</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="tiago6.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Tiago:</strong> Concertos brutais junto ao mar.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="beatriz6.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Beatriz:</strong> Ambiente incrível e muito animado.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="rui6.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Rui:</strong> A melhor festa de verão do norte.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>É pago?</strong> Não.</div>
+        <div><strong>Quando é?</strong> Agosto.</div>
+        <div><strong>Tem concertos?</strong> Sim, todas as noites.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Semana do Mar — Porto Moniz')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Semana do Mar — Porto Moniz')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
-
 
 
 
@@ -692,6 +699,7 @@ body {
 }
 
 </script>
+
 
 
 
@@ -740,3 +748,4 @@ body {
 
 
 </html>
+

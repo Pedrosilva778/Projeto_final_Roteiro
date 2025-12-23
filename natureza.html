@@ -413,122 +413,131 @@ body {
   <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 
   
-   <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="achadadacruz.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Teleférico da Achada da Cruz</div>
+ <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="tentilhao.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Tentilhão-da-Madeira</div>
 
-  <input type="checkbox" id="toggle-achada" class="accordion-checkbox" hidden>
-  <label for="toggle-achada" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-tentilhao" class="accordion-checkbox" hidden>
+  <label for="toggle-tentilhao" class="accordion-toggle">Ver detalhes</label>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Teleférico mais íngreme da Europa</li>
-          <li>Vista incrível sobre a Fajã da Quebrada Nova</li>
-          <li>Experiência única no Norte da Madeira</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Uma descida impressionante até à fajã, com paisagens dramáticas e contacto direto com a natureza.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Teleférico → Fajã → Passeio livre → Subida.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Bilhete ida e volta</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 1h</li>
-          <li>Localização: Porto Moniz</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Piscinas Naturais do Porto Moniz</li>
-          <li>Aquário da Madeira</li>
-          <li>Centro Ciência Viva</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 5€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Teleférico da Achada da Cruz')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Teleférico da Achada da Cruz')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Uma das aves mais emblemáticas da Madeira, facilmente avistada na Laurissilva. Conhecido pelo seu canto suave e cores discretas.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Onde Encontrar</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Levada do Rei</li>
+        <li>Caldeirão Verde</li>
+        <li>Fanal</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="sofia12.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Sofia:</strong> Vi vários no trilho, muito bonitos.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ricardo12.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ricardo:</strong> Canto suave, dá um ambiente mágico.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="lara12.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Lara:</strong> Muito fácil de fotografar.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>É endémico?</strong> Sim, só existe na Madeira.</div>
+        <div><strong>É fácil de ver?</strong> Muito, especialmente em trilhos.</div>
+        <div><strong>É perigoso?</strong> Não, é totalmente inofensivo.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Tentilhão-da-Madeira')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Tentilhão-da-Madeira')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
 
 
 
 
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="centrocienciaviva.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Centro de Ciência Viva do Porto Moniz</div>
 
-  <input type="checkbox" id="toggle-ciencia" class="accordion-checkbox" hidden>
-  <label for="toggle-ciencia" class="accordion-toggle">Ver detalhes</label>
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="orquidea.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Orquídea-da-Madeira</div>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <input type="checkbox" id="toggle-orquidea" class="accordion-checkbox" hidden>
+  <label for="toggle-orquidea" class="accordion-toggle">Ver detalhes</label>
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Exposições interativas</li>
-          <li>Ideal para famílias</li>
-          <li>Experiências científicas divertidas</li>
-        </ul>
-      </div>
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Um espaço educativo e interativo dedicado à ciência, perfeito para todas as idades.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Exposições → Atividades → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Entrada no museu</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 1h30</li>
-          <li>Localização: Porto Moniz</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Aquário da Madeira</li>
-          <li>Piscinas Naturais</li>
-          <li>Teleférico da Achada da Cruz</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 5€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Centro Ciência Viva Porto Moniz')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Centro Ciência Viva Porto Moniz')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Uma das plantas endémicas mais raras da Madeira, conhecida pelas suas flores delicadas e cores vibrantes.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Onde Encontrar</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Laurissilva da Madeira</li>
+        <li>Zona das Queimadas</li>
+        <li>Encostas húmidas e sombrias</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="sofia13.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Sofia:</strong> Flores lindíssimas, super delicadas.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ricardo13.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ricardo:</strong> Difícil de encontrar, mas vale a pena.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="lara13.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Lara:</strong> Uma das plantas mais bonitas da ilha.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>É endémica?</strong> Sim, só existe na Madeira.</div>
+        <div><strong>É fácil de ver?</strong> Não, é rara.</div>
+        <div><strong>Florece quando?</strong> Primavera e início do verão.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Orquídea-da-Madeira')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Orquídea-da-Madeira')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
 
@@ -537,125 +546,135 @@ body {
 
 
     
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="grutassaovicente.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Grutas de São Vicente</div>
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="laurissilva.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Floresta Laurissilva</div>
 
-  <input type="checkbox" id="toggle-grutas" class="accordion-checkbox" hidden>
-  <label for="toggle-grutas" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-laurissilva" class="accordion-checkbox" hidden>
+  <label for="toggle-laurissilva" class="accordion-toggle">Ver detalhes</label>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Túneis vulcânicos naturais</li>
-          <li>Centro de vulcanismo interativo</li>
-          <li>Experiência educativa e única</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>As Grutas de São Vicente são um dos maiores pontos de interesse geológico da Madeira, com túneis formados por erupções vulcânicas há milhares de anos.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Visita guiada às grutas → Centro de vulcanismo → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Visita guiada</li>
-          <li>Acesso ao centro de vulcanismo</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 1h</li>
-          <li>Localização: São Vicente</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Piscinas Naturais do Porto Moniz</li>
-          <li>Teleférico da Achada da Cruz</li>
-          <li>Centro Ciência Viva</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 8€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Grutas de São Vicente')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Grutas de São Vicente')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Uma floresta pré-histórica única no mundo, Património Mundial da UNESCO, repleta de árvores ancestrais, neblina mística e biodiversidade incrível.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Destaques</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Floresta húmida e densa</li>
+        <li>Espécies endémicas</li>
+        <li>Ambiente místico com neblina</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="tiago13.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Tiago:</strong> Parece um cenário de filme.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="sofia14.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Sofia:</strong> A neblina cria um ambiente mágico.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ricardo14.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ricardo:</strong> A melhor parte da ilha para quem ama natureza.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>É única no mundo?</strong> Sim, só existe na Madeira e Canárias.</div>
+        <div><strong>É seguro caminhar?</strong> Sim, nos trilhos oficiais.</div>
+        <div><strong>É sempre húmida?</strong> Quase sempre, devido ao microclima.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Floresta Laurissilva')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Floresta Laurissilva')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
 
 
 
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="piscinasnaturais.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Piscinas Naturais do Porto Moniz</div>
 
-  <input type="checkbox" id="toggle-piscinas" class="accordion-checkbox" hidden>
-  <label for="toggle-piscinas" class="accordion-toggle">Ver detalhes</label>
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="pombotrocaz.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Pombo‑Trocaz</div>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <input type="checkbox" id="toggle-pombotrocaz" class="accordion-checkbox" hidden>
+  <label for="toggle-pombotrocaz" class="accordion-toggle">Ver detalhes</label>
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Águas naturais vulcânicas</li>
-          <li>Espaço seguro e controlado</li>
-          <li>Vista incrível para o mar</li>
-        </ul>
-      </div>
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>As piscinas naturais mais famosas da Madeira, perfeitas para um mergulho relaxante.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Piscinas → Zona de descanso → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Acesso às piscinas</li>
-          <li>Vigilância</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: Livre</li>
-          <li>Localização: Porto Moniz</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Aquário da Madeira</li>
-          <li>Teleférico da Achada da Cruz</li>
-          <li>Centro Ciência Viva</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 3€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Piscinas Naturais Porto Moniz')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Piscinas Naturais Porto Moniz')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>A ave mais icónica da Madeira, endémica da Laurissilva. Grande, elegante e tímida, é um símbolo vivo da floresta madeirense.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Onde Encontrar</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Fanal</li>
+        <li>Ribeiro Frio</li>
+        <li>Levada dos Balcões</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="sofia15.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Sofia:</strong> Consegui ver um nos Balcões, lindo!</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ricardo15.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ricardo:</strong> Muito raro, mas vale a espera.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="lara15.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Lara:</strong> Um dos símbolos mais bonitos da ilha.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>É endémico?</strong> Sim, só existe na Madeira.</div>
+        <div><strong>É fácil de ver?</strong> Não, é tímido e raro.</div>
+        <div><strong>É perigoso?</strong> Não, totalmente inofensivo.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Pombo‑Trocaz')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Pombo‑Trocaz')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
+
+
+
 
 
 

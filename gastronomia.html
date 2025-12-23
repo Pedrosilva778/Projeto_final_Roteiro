@@ -408,253 +408,262 @@ body {
     <button class="botao-guardar" style="margin-left: 0.5rem;">Pesquisar</button>
   </div>
 
-  <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Coisas para fazer no Funchal!</h3>
+  <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Coisas para fazer no norte da Ilha da Madeira!</h3>
 
   <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 
   
- <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="museucr7.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Museu CR7</div>
+ <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="espetada.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Espetada Madeirense</div>
 
-  <input type="checkbox" id="toggle-museucr7" class="accordion-checkbox" hidden>
-  <label for="toggle-museucr7" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-espetada" class="accordion-checkbox" hidden>
+  <label for="toggle-espetada" class="accordion-toggle">Ver detalhes</label>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Troféus oficiais do Cristiano Ronaldo</li>
-          <li>Experiência multimédia</li>
-          <li>Local icónico no Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Museu dedicado à carreira de Cristiano Ronaldo, com troféus, vídeos e memorabilia exclusiva.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Exposições → Zona multimédia → Loja → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Entrada no museu</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 1h</li>
-          <li>Localização: Centro do Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-          <li>Miradouro Pico dos Barcelos</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 15€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Museu CR7')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Museu CR7')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>A clássica espetada em pau de louro, grelhada na brasa e servida com milho frito.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Inclui</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Espetada tradicional</li>
+        <li>Milho frito</li>
+        <li>Salada ou pão</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="tiago7.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Tiago:</strong> A melhor espetada da ilha!</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="sofia7.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Sofia:</strong> Sabor autêntico e delicioso.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="rui7.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Rui:</strong> Combina perfeitamente com milho frito.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>A carne é de quê?</strong> Normalmente vaca.</div>
+        <div><strong>É picante?</strong> Não.</div>
+        <div><strong>É típico da Madeira?</strong> Sim, muito tradicional.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Espetada Madeirense')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Espetada Madeirense')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
 
 
 
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="bolodocaco.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Bolo do Caco</div>
 
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="telefericofunchal.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Teleférico do Funchal</div>
+  <input type="checkbox" id="toggle-bolocaco" class="accordion-checkbox" hidden>
+  <label for="toggle-bolocaco" class="accordion-toggle">Ver detalhes</label>
 
-  <input type="checkbox" id="toggle-telefericofunchal" class="accordion-checkbox" hidden>
-  <label for="toggle-telefericofunchal" class="accordion-toggle">Ver detalhes</label>
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
-
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Vista aérea sobre o Funchal</li>
-          <li>Viagem panorâmica</li>
-          <li>Ligação direta ao Monte</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Um dos teleféricos mais famosos da Madeira, com vistas incríveis sobre a baía e o centro do Funchal.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Funchal → Monte (viagem panorâmica).</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Bilhete de teleférico</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 15 min</li>
-          <li>Localização: Centro do Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-          <li>Miradouro das Neves</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 18€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Teleférico do Funchal')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Teleférico do Funchal')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Pão típico da Madeira, servido quente com manteiga de alho — simples, mas irresistível.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Inclui</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Bolo do caco tradicional</li>
+        <li>Manteiga de alho</li>
+        <li>Opcional: chouriço ou atum</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ana8.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ana:</strong> O melhor pão que já comi!</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="marco8.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Marco:</strong> A manteiga de alho é perfeita.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="clara8.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Clara:</strong> Sempre peço dois!</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>É picante?</strong> Não.</div>
+        <div><strong>É típico?</strong> Sim, muito tradicional.</div>
+        <div><strong>Serve-se quente?</strong> Sempre.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Bolo do Caco')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Bolo do Caco')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
-
-
-
-
 
 
 
     
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="jardimmontepalace.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Jardim Tropical Monte Palace</div>
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="bolomel.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Bolo de Mel da Madeira</div>
 
-  <input type="checkbox" id="toggle-montepalace" class="accordion-checkbox" hidden>
-  <label for="toggle-montepalace" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-bolomel" class="accordion-checkbox" hidden>
+  <label for="toggle-bolomel" class="accordion-toggle">Ver detalhes</label>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Jardins exóticos e lagoas</li>
-          <li>Arte africana e azulejos históricos</li>
-          <li>Vistas incríveis sobre o Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Um dos jardins mais bonitos da Madeira, com coleções botânicas, arte internacional e paisagens únicas.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Jardins → Lagoas → Museu → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Acesso ao jardim</li>
-          <li>Acesso ao museu</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 1h30 – 2h</li>
-          <li>Localização: Monte (acesso pelo teleférico do Funchal)</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Teleférico do Funchal</li>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 15€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Jardim Tropical Monte Palace')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Jardim Tropical Monte Palace')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>O doce mais tradicional da ilha, feito com mel de cana, especiarias e frutos secos. Dura meses sem perder sabor.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Inclui</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Mel de cana</li>
+        <li>Especiarias</li>
+        <li>Frutos secos</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="carlos7.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Carlos:</strong> Sabor único e muito aromático.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="vera7.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Vera:</strong> Perfeito com café.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="joao7.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>João:</strong> O melhor bolo tradicional da ilha.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>Dura muito tempo?</strong> Sim, até 1 ano.</div>
+        <div><strong>É doce?</strong> Bastante.</div>
+        <div><strong>É típico do Natal?</strong> Sim, mas come-se todo o ano.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Bolo de Mel da Madeira')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Bolo de Mel da Madeira')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
 
 
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="sopatrigo.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Sopa de Trigo</div>
 
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="museunatural.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Museu de História Natural do Funchal</div>
+  <input type="checkbox" id="toggle-sopatrigo" class="accordion-checkbox" hidden>
+  <label for="toggle-sopatrigo" class="accordion-toggle">Ver detalhes</label>
 
-  <input type="checkbox" id="toggle-museunatural" class="accordion-checkbox" hidden>
-  <label for="toggle-museunatural" class="accordion-toggle">Ver detalhes</label>
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
-
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Fauna e flora da Madeira</li>
-          <li>Exposições educativas</li>
-          <li>Local histórico no centro</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Museu dedicado à biodiversidade da Madeira, com coleções de animais, plantas e minerais.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Exposições → Sala temática → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Entrada no museu</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 45 min</li>
-          <li>Localização: Centro do Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-          <li>Miradouro das Neves</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 3€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Museu de História Natural do Funchal')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Museu de História Natural do Funchal')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Uma sopa tradicional e reconfortante, feita com trigo, legumes e carne — receita típica das avós madeirenses.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Inclui</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Trigo cozido</li>
+        <li>Legumes frescos</li>
+        <li>Carne de vaca ou porco</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="helena7.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Helena:</strong> Sabor de infância total.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ricardo7.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ricardo:</strong> Muito rica e saborosa.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="maria7.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Maria:</strong> A melhor sopa da ilha.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>É pesada?</strong> É consistente, mas leve de sabor.</div>
+        <div><strong>É tradicional?</strong> Sim, muito antiga.</div>
+        <div><strong>Tem carne?</strong> Normalmente sim.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Sopa de Trigo')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Sopa de Trigo')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
 
@@ -692,6 +701,7 @@ body {
 }
 
 </script>
+
 
 
 
@@ -740,3 +750,4 @@ body {
 
 
 </html>
+

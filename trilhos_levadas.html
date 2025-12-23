@@ -408,255 +408,269 @@ body {
     <button class="botao-guardar" style="margin-left: 0.5rem;">Pesquisar</button>
   </div>
 
-  <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Coisas para fazer no Funchal!</h3>
+  <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Coisas para fazer no norte da Ilha da Madeira!</h3>
 
   <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 
   
- <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="museucr7.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Museu CR7</div>
+ <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="caldeiraoverde.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Levada do Caldeirão Verde</div>
 
-  <input type="checkbox" id="toggle-museucr7" class="accordion-checkbox" hidden>
-  <label for="toggle-museucr7" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-cverde" class="accordion-checkbox" hidden>
+  <label for="toggle-cverde" class="accordion-toggle">Ver detalhes</label>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Troféus oficiais do Cristiano Ronaldo</li>
-          <li>Experiência multimédia</li>
-          <li>Local icónico no Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Museu dedicado à carreira de Cristiano Ronaldo, com troféus, vídeos e memorabilia exclusiva.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Exposições → Zona multimédia → Loja → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Entrada no museu</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 1h</li>
-          <li>Localização: Centro do Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-          <li>Miradouro Pico dos Barcelos</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 15€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Museu CR7')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Museu CR7')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Um dos trilhos mais famosos da Madeira, com túneis, floresta Laurissilva e uma lagoa impressionante no final.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Atividades</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Caminhada na Laurissilva</li>
+        <li>Passagem por túneis</li>
+        <li>Visita à lagoa do Caldeirão Verde</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="sofia10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Sofia:</strong> Trilho mágico do início ao fim.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ricardo10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ricardo:</strong> A lagoa é surreal.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="maria10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Maria:</strong> Recomendo levar lanterna.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>Dificuldade?</strong> Moderada.</div>
+        <div><strong>Precisa de lanterna?</strong> Sim, para os túneis.</div>
+        <div><strong>É seguro?</strong> Sim, mas tem zonas estreitas.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Levada do Caldeirão Verde')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Levada do Caldeirão Verde')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
 
 
 
 
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="telefericofunchal.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Teleférico do Funchal</div>
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="levadadorei.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Levada do Rei</div>
 
-  <input type="checkbox" id="toggle-telefericofunchal" class="accordion-checkbox" hidden>
-  <label for="toggle-telefericofunchal" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-rei" class="accordion-checkbox" hidden>
+  <label for="toggle-rei" class="accordion-toggle">Ver detalhes</label>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Vista aérea sobre o Funchal</li>
-          <li>Viagem panorâmica</li>
-          <li>Ligação direta ao Monte</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Um dos teleféricos mais famosos da Madeira, com vistas incríveis sobre a baía e o centro do Funchal.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Funchal → Monte (viagem panorâmica).</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Bilhete de teleférico</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 15 min</li>
-          <li>Localização: Centro do Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-          <li>Miradouro das Neves</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 18€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Teleférico do Funchal')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Teleférico do Funchal')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Um trilho fácil e muito verde, ideal para quem quer conhecer a Laurissilva sem grande esforço.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Atividades</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Caminhada leve</li>
+        <li>Observação da natureza</li>
+        <li>Fotografia da floresta</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ana10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ana:</strong> Trilho super tranquilo.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="marco10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Marco:</strong> Muito verde e fresco.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="clara10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Clara:</strong> Ideal para iniciantes.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>Dificuldade?</strong> Fácil.</div>
+        <div><strong>É circular?</strong> Não, ida e volta.</div>
+        <div><strong>É seguro?</strong> Sim, muito.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Levada do Rei')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Levada do Rei')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
-
-
-
 
 
 
 
     
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="jardimmontepalace.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Jardim Tropical Monte Palace</div>
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="saolourenco_trilho.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Vereda da Ponta de São Lourenço</div>
 
-  <input type="checkbox" id="toggle-montepalace" class="accordion-checkbox" hidden>
-  <label for="toggle-montepalace" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-furado" class="accordion-checkbox" hidden>
+  <label for="toggle-furado" class="accordion-toggle">Ver detalhes</label>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Jardins exóticos e lagoas</li>
-          <li>Arte africana e azulejos históricos</li>
-          <li>Vistas incríveis sobre o Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Um dos jardins mais bonitos da Madeira, com coleções botânicas, arte internacional e paisagens únicas.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Jardins → Lagoas → Museu → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Acesso ao jardim</li>
-          <li>Acesso ao museu</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 1h30 – 2h</li>
-          <li>Localização: Monte (acesso pelo teleférico do Funchal)</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Teleférico do Funchal</li>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 15€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Jardim Tropical Monte Palace')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Jardim Tropical Monte Palace')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Um dos trilhos mais impressionantes da Madeira, com paisagens vulcânicas, falésias dramáticas e vistas infinitas sobre o oceano Atlântico.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Atividades</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Caminhada costeira</li>
+        <li>Miradouros naturais</li>
+        <li>Fotografia épica</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ines11.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Inês:</strong> Um dos trilhos mais bonitos da ilha.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="goncalo11.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Gonçalo:</strong> Paisagens completamente diferentes do resto da Madeira.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="lara11.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Lara:</strong> Perfeito para fotos épicas.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>Dificuldade?</strong> Moderada.</div>
+        <div><strong>Há sombra?</strong> Não, levar água.</div>
+        <div><strong>É pago?</strong> Não.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Vereda da Ponta de São Lourenço')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Vereda da Ponta de São Lourenço')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
 
 
 
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
-  <img src="museunatural.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Museu de História Natural do Funchal</div>
 
-  <input type="checkbox" id="toggle-museunatural" class="accordion-checkbox" hidden>
-  <label for="toggle-museunatural" class="accordion-toggle">Ver detalhes</label>
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="25fontes.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Levada das 25 Fontes</div>
 
-  <div class="accordion-content">
-    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+  <input type="checkbox" id="toggle-25fontes" class="accordion-checkbox" hidden>
+  <label for="toggle-25fontes" class="accordion-toggle">Ver detalhes</label>
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
-        <ul>
-          <li>Fauna e flora da Madeira</li>
-          <li>Exposições educativas</li>
-          <li>Local histórico no centro</li>
-        </ul>
-      </div>
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Museu dedicado à biodiversidade da Madeira, com coleções de animais, plantas e minerais.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Exposições → Sala temática → Regresso.</p>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
-        <ul>
-          <li>Entrada no museu</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
-        <ul>
-          <li>Duração: 45 min</li>
-          <li>Localização: Centro do Funchal</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
-        <ul>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-          <li>Miradouro das Neves</li>
-        </ul>
-      </div>
-
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 3€</strong></div>
-
-      <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Museu de História Natural do Funchal')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Museu de História Natural do Funchal')">Adicionar aos Favoritos</button>
-      </div>
-
+    <div>
+      <strong style="color: var(--cor-terciaria);">Descrição</strong>
+      <p>Um dos trilhos mais populares da Madeira, com cascatas, lagoas e floresta densa.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Atividades</strong>
+      <ul style="margin-left: 1rem;">
+        <li>Caminhada na natureza</li>
+        <li>Visita à lagoa das 25 Fontes</li>
+        <li>Exploração da Laurissilva</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="helena11.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Helena:</strong> A lagoa é lindíssima.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="marco11.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Marco:</strong> Trilho muito completo.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="patricia11.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Patrícia:</strong> Recomendo ir cedo para evitar multidões.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div><strong>Dificuldade?</strong> Moderada.</div>
+        <div><strong>É seguro?</strong> Sim.</div>
+        <div><strong>Tem muitas pessoas?</strong> Sim, é muito popular.</div>
+      </div>
+    </details>
+
+    <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarCarrinho('Levada das 25 Fontes')">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;" onclick="adicionarFavoritos('Levada das 25 Fontes')">Adicionar aos Favoritos</button>
+    </div>
+
   </div>
 </div>
+
 
 
 
@@ -692,6 +706,7 @@ body {
 }
 
 </script>
+
 
 
 
@@ -740,3 +755,4 @@ body {
 
 
 </html>
+
