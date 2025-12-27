@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelX - Dashboard</title>
+
+  <style>
+    
+:root {
+  --cor-primaria: #3399ff;
+  --cor-secundaria: white;
+  --cor-terciaria: #003d7a;
+  --cor-cinzento: #6c757d;
+  --cor-verde: #198754;
+  --cor-vermelho: #dc3545;
+  --cor-laranja: #ffa500;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+  background-color: var(--cor-secundaria);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+.header {
+  background: linear-gradient(90deg, var(--cor-laranja), #ffa500);
+  color: var(--cor-secundaria);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.header-left { display: flex; align-items: center; gap: 1rem; }
+
+.logo-header {
+  width: 90px;
+  height: auto;
+}
+
+.header-title { font-size: 1.1rem; font-weight: 600; }
+
+.header-right { display: flex; align-items: center; gap: 1rem; }
+
+.language-selector {
+  background-color: transparent;
+  color: var(--cor-secundaria);
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.user-profile {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background-color: var(--cor-secundaria);
+  border: 2px solid var(--cor-secundaria);
+}
+
+.container { display: flex; flex: 1; min-height: 0; }
+
+.menu {
+  width: 240px;
+  background-color: var(--cor-cinzento);
+  padding-top: 20px;
+  flex-shrink: 0;
+}
+
+.menu ul { list-style: none; }
+.menu li { position: relative; }
+
+.menu > ul > li > a {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.3s;
+}
+
+.menu > ul > li:hover > a {
+  background-color: var(--cor-laranja);
+}
+
+
+.menu li ul {
+  display: none;
+  position: absolute;
+  top: 0; left: 100%;
+  background-color: var(--cor-secundaria);
+  min-width: 220px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.menu li:hover ul { display: block; }
+
+.menu li ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--cor-laranja);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.menu li ul li a:hover {
+  background-color: var(--cor-laranja);
+  color: var(--cor-secundaria);
+}
+
+
+.arrow { font-size: 14px; color: var(--cor-secundaria); }
+
+.content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: var(--cor-secundaria);
+  min-width: 0;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background-color: var(--cor-secundaria);
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: var(--cor-laranja);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-content { font-size: 0.9rem; color: #666; }
+
+.warning-icon { font-size: 1.1rem; color: var(--cor-laranja); }
+
+
+
+@media (max-width: 992px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .menu {
+    width: 100%;
+    position: relative;
+    padding: 0;
+  }
+
+  .menu li ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    box-shadow: none;
+  }
+
+  .menu li:hover ul {
+    display: block;
+  }
+
+  .menu > ul > li > a {
+    padding: 12px 15px;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .main-grid, .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-links {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .header-title {
+    font-size: 0.95rem;
+  }
+
+  .language-selector {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .user-profile {
+    width: 35px;
+    height: 35px;
+  }
+
+  .menu > ul > li > a {
+    font-size: 0.9rem;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  .card-content, table {
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 0.45rem;
+  }
+}
+.accordion-toggle {
+  background-color: var(--cor-laranja);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Segoe UI','Roboto','Open Sans',sans-serif;
+  transition: background-color 0.3s;
+}
+
+.accordion-toggle:hover {
+  background-color: var(--cor-cinzento);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.accordion-checkbox:checked ~ .accordion-content {
+  max-height: 3000px;
+}
+.botao {
+  background-color: var(--cor-laranja);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Segoe UI','Roboto','Open Sans',sans-serif;
+  transition: background-color 0.3s;
+}
+
+.botao:hover {
+  background-color: var(--cor-cinzento);
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+  
+  <header class="header">
+    <div class="header-left">
+      <img src="logo.png.png" class="logo-header">
+      <div class="header-title">TravelX - Plataforma Turística</div>
+    </div>
+
+    <div class="header-right">
+      <select class="language-selector">
+        <option>PT | EN</option>
+      </select>
+      <img src="user.png" class="user-profile">
+    </div>
+  </header>
+
+  <div class="container">
+
+
+    <nav class="menu">
+      <ul>
+        <li><a href="layout.html">Início <span class="arrow">º</span></a></li>
+
+        <li>
+          <a href="#">Geral <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="preferencias.html">Preferências</a></li>
+            <li><a href="dados.html">Dados Pessoais</a></li>
+            <li><a href="privacidade.html">Privacidade</a></li>
+            <li><a href="ajuda.html">Ajuda</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Lugares para Ver <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="atracoes.html">Principais Atrações</a></li>
+            <li><a href="norte.html">Costa Norte</a></li>
+            <li><a href="sul.html">Costa Sul</a></li>
+            <li><a href="porto_santo.html">Porto Santo</a></li>
+            <li><a href="capital.html">Capital</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Coisas para Fazer <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="melhores_experiencias.html">Melhores Experiências</a></li>
+            <li><a href="norte_fazer.html">Costa Norte</a></li>
+            <li><a href="sul_fazer.html">Costa Sul</a></li>
+            <li><a href="porto_santo_fazer.html">Porto Santo</a></li>
+            <li><a href="capital_fazer.html">Capital</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Inspiração de Viagem <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="tendencias.html">Tendências</a></li>
+            <li><a href="melhores_lugares.html">Melhores Lugares</a></li>
+            <li><a href="festas_arraiais.html">Festas e Arraiais</a></li>
+            <li><a href="gastronomia.html">Gastronomia</a></li>
+            <li><a href="trilhos_levadas.html">Trilhos e Levadas</a></li>
+            <li><a href="natureza.html">Natureza</a></li>
+            <li><a href="cultura.html">Cultura</a></li>
+            <li><a href="desportos.html">Desportos</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Carrinho <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="carrinho.html">Lista de Artigos</a></li>
+            <li><a href="finalizar_roteiro.html">Finalizar Roteiro</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Favoritos <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="lista_favoritos.html">Lista de Artigos</a></li>
+            <li><a href="pesquisar_atividades.html">Pesquisar Atividades</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Notificações <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="updates.html">Updates</a></li>
+            <li><a href="atividades.html">Atividades</a></li>
+            <li><a href="pagamentos.html">Pagamentos</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Roteiro <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="atividades_realizar.html">Atividades a Realizar</a></li>
+            <li><a href="arquivo_atividades.html">Arquivo de Atividades</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+
+<main class="content">
+
+  <h2 style="color: var(--cor-laranja); margin-bottom: 1rem;">
+    Coisas para Fazer 
+  </h2>
+
+  <div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
+    <input type="text" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; width: 220px;">
+    <button class="botao-guardar" style="margin-left: 0.5rem;">Pesquisar</button>
+  </div>
+
+  <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Melhores Experiências</h3>
+
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+
+  
+   <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
+  <img src="carreiros.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Carreiros do Monte</div>
+
+  <input type="checkbox" id="toggle-carreirosmonte" class="accordion-checkbox" hidden>
+  <label for="toggle-carreirosmonte" class="accordion-toggle">Ver detalhes</label>
+
+  <div class="accordion-content">
+    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+
+      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
+        <ul>
+          <li>Descida tradicional em cesto</li>
+          <li>Experiência única da Madeira</li>
+          <li>Conduzido por carreiros experientes</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
+        <p>Os famosos carros de cesto descem as ruas do Monte, proporcionando uma experiência divertida e tradicional.</p>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
+        <p>Monte → Descida em cesto → Livramento.</p>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
+        <ul>
+          <li>Carro de cesto</li>
+          <li>Dois carreiros</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
+        <ul>
+          <li>Duração: 10 min</li>
+          <li>Localização: Monte</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
+        <ul>
+          <li>Pico do Areeiro</li>
+          <li>Zona Velha</li>
+          <li>Miradouro Pico dos Barcelos</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 17,50€ – 27,50€</strong></div>
+
+      <div style="display: flex; gap: 1rem;">
+        <button class="botao">Adicionar ao Carrinho</button>
+        <button class="botao">Adicionar aos Favoritos</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
+  <img src="golfinho.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Observação de Golfinhos</div>
+
+  <input type="checkbox" id="toggle-golfinhos2" class="accordion-checkbox" hidden>
+  <label for="toggle-golfinhos2" class="accordion-toggle">Ver detalhes</label>
+
+  <div class="accordion-content">
+    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+
+      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
+        <ul>
+          <li>Avistamento de golfinhos e baleias</li>
+          <li>Passeio relaxante no mar</li>
+          <li>Vistas incríveis da costa</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
+        <p>Passeio marítimo ideal para quem procura contacto com a vida marinha e paisagens únicas.</p>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
+        <p>Saída do porto → Observação → Fotos → Regresso.</p>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
+        <ul>
+          <li>Skipper</li>
+          <li>Coletes salva-vidas</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
+        <ul>
+          <li>Duração: 2h30</li>
+          <li>Localização: Funchal</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
+        <ul>
+          <li>Cabo Girão</li>
+          <li>Baía de Câmara de Lobos</li>
+          <li>Cais da Ponta do Sol</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 49€ – 60€</strong></div>
+
+      <div style="display: flex; gap: 1rem;">
+        <button class="botao">Adicionar ao Carrinho</button>
+        <button class="botao">Adicionar aos Favoritos</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+    
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
+  <img src="4x4.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Passeio 4x4</div>
+
+  <input type="checkbox" id="toggle-4x4" class="accordion-checkbox" hidden>
+  <label for="toggle-4x4" class="accordion-toggle">Ver detalhes</label>
+
+  <div class="accordion-content">
+    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+
+      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
+        <ul>
+          <li>Aventura fora de estrada</li>
+          <li>Paisagens naturais únicas</li>
+          <li>Experiência emocionante</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
+        <p>Passeio 4x4 por trilhos e zonas remotas da Madeira, ideal para amantes de aventura.</p>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
+        <p>Partida → Trilhos 4x4 → Miradouros → Regresso.</p>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
+        <ul>
+          <li>Jipe 4x4</li>
+          <li>Guia profissional</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
+        <ul>
+          <li>Duração: 3h</li>
+          <li>Localização: Madeira</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
+        <ul>
+          <li>Pico do Areeiro</li>
+          <li>Miradouro das Neves</li>
+          <li>Paul do Mar</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 44€ – 65€</strong></div>
+
+      <div style="display: flex; gap: 1rem;">
+        <button class="botao">Adicionar ao Carrinho</button>
+        <button class="botao">Adicionar aos Favoritos</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria);">
+  <img src="cultura.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Teatro</div>
+
+  <input type="checkbox" id="toggle-teatro" class="accordion-checkbox" hidden>
+  <label for="toggle-teatro" class="accordion-toggle">Ver detalhes</label>
+
+  <div class="accordion-content">
+    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+
+      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
+        <ul>
+          <li>Espetáculos culturais ao vivo</li>
+          <li>Experiência artística envolvente</li>
+          <li>Ideal para uma noite diferente</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
+        <p>Uma experiência cultural única, com peças de teatro que vão desde o clássico ao contemporâneo.</p>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
+        <p>Chegada ao teatro → Espetáculo ao vivo → Finalização.</p>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
+        <ul>
+          <li>Bilhete para o espetáculo</li>
+          <li>Lugar marcado</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
+        <ul>
+          <li>Duração: 1h30 – 2h</li>
+          <li>Localização: Funchal</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
+        <ul>
+          <li>Jantar no centro do Funchal</li>
+          <li>Zona Velha</li>
+          <li>Mercado dos Lavradores</li>
+        </ul>
+      </div>
+
+      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 10€ – 20€</strong></div>
+
+      <div style="display: flex; gap: 1rem;">
+        <button class="botao">Adicionar ao Carrinho</button>
+        <button class="botao">Adicionar aos Favoritos</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+  </div>
+<div style="margin-top: 3rem; text-align: center;">
+
+  <div style="font-size: 1.4rem; color: var(--cor-terciaria); margin-bottom: 1.5rem;">
+    Não sabes o que fazer? Gera um roteiro de um dia para ti!
+  </div>
+
+  <button onclick="gerarRoteiro()" class="botao-roteiro">
+    Gerar Roteiro Aleatório
+  </button>
+
+  <div id="roteiro-container" style="display:none; margin-top:2rem;">
+
+    <h3 style="color: var(--cor-laranja); margin-bottom:1.5rem;">
+      O teu roteiro para hoje 🎯
+    </h3>
+
+    <div id="roteiro-cards"
+      style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;">
+    </div>
+
+  </div>
+</div>
+
+
+
+
+</main>
+<script>
+function gerarRoteiro() {
+
+ 
+  const duracoes = {
+    curta: 1,
+    media: 2
+  };
+
+ 
+  const experiencias = [
+    { img: "carreiros.png", titulo: "Carreiros do Monte", tipo: "curta", preco: "27,50€" },
+    { img: "golfinho.png", titulo: "Observação de Golfinhos", tipo: "curta", preco: "35€ – 45€" },
+    { img: "4x4.png", titulo: "Passeio 4x4", tipo: "media", preco: "35€ – 50€" },
+    { img: "cultura.png", titulo: "Teatro", tipo: "curta", preco: "10€ – 20€" }
+  ];
+
+  const DIA_HORAS = 8;
+  let horasUsadas = 0;
+  const selecionadas = [];
+
+  
+  const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+  const lista = shuffle(experiencias);
+
+  
+  for (const exp of lista) {
+    const dur = duracoes[exp.tipo];
+
+    if (horasUsadas + dur <= DIA_HORAS) {
+      selecionadas.push(exp);
+      horasUsadas += dur;
+    }
+  }
+
+ 
+  const container = document.getElementById("roteiro-cards");
+  container.innerHTML = "";
+
+  const bloco = document.getElementById("roteiro-container");
+  bloco.style.display = "block";
+
+  const frase = document.querySelector("#roteiro-container h3");
+
+  if (selecionadas.length === 4) {
+    frase.innerText = "Dia cheio! Quatro experiências perfeitas para ti!";
+  } else if (selecionadas.length === 3) {
+    frase.innerText = "Três experiências que encaixam perfeitamente no teu dia!";
+  } else if (selecionadas.length === 2) {
+    frase.innerText = "Um dia equilibrado com duas atividades!";
+  } else {
+    frase.innerText = "Uma experiência especial só para ti!";
+  }
+
+  container.style.display = "grid";
+  container.style.gridTemplateColumns = "repeat(4, 1fr)";
+  container.style.justifyItems = "center";
+  container.style.gap = "1.5rem";
+
+  selecionadas.forEach(exp => {
+    container.innerHTML += `
+      <div class="card">
+        <img src="${exp.img}" style="width: 100%; border-radius: 6px;">
+        <div class="card-title">${exp.titulo}</div>
+        <div class="card-content">Preço: ${exp.preco}</div>
+      </div>
+    `;
+  });
+}
+</script>
+
+
+
+
+
+
+
+</div>
+<footer style="background-color: #f0f0f0; padding: 32px; font-size: 13px; color: #333; border-top: 1px solid #ccc;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: start;">
+
+    <div>
+      <img src="logo.png.png" alt="TravelX" style="width: 120px; margin-bottom: 1rem;">
+      <div style="font-size: 12px; color: #666;">Madeira. Tão tua.</div>
+    </div>
+
+    <div style="display: flex; flex-direction: row; gap: 4rem;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <strong style="color: var(--cor-laranja);">Explorar</strong>
+        <a href="experiencias.html" style="text-decoration: none; color: #333;">Experiências</a>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <strong style="color: var(--cor-laranja);">Informações</strong>
+        <a href="contactos.html" style="text-decoration: none; color: #333;">Contactos</a>
+        <a href="privacidade.html" style="text-decoration: none; color: #333;">Privacidade</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="max-width: 1200px; margin: 2rem auto 0; display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: #666;">
+    <div>
+      © TravelX – Plataforma de experiências na Madeira |
+      <a href="privacidade.html" style="color: #003d7a; text-decoration: underline;">Proteção de Dados e Termos de Utilização</a>
+    </div>
+    <div>
+      Câmara de Lobos, 9300-081 Madeira | Tel: +351 291 000000
+    </div>
+    <div>
+      Processado em 0.07 segundos – powered by TravelX engine
+    </div>
+  </div>
+</footer>
+
+
+</body>
+
+
+</html>

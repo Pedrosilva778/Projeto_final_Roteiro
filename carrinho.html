@@ -242,10 +242,10 @@ body {
     padding: 0.45rem;
   }
 }
- .botao-enviar {
+.accordion-toggle {
   background-color: var(--cor-laranja);
   color: white;
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -255,10 +255,46 @@ body {
   transition: background-color 0.3s;
 }
 
-z
-.botao-enviar:hover {
+.accordion-toggle:hover {
   background-color: var(--cor-cinzento);
 }
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.accordion-checkbox:checked ~ .accordion-content {
+  max-height: 3000px;
+}
+.botao {
+  background-color: var(--cor-laranja);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Segoe UI','Roboto','Open Sans',sans-serif;
+  transition: background-color 0.3s;
+}
+
+.botao:hover {
+  background-color: var(--cor-cinzento);
+}
+.botao-finalizar {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: var(--cor-laranja);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 
 
 </style>
@@ -346,7 +382,7 @@ z
         <li>
           <a href="#">Favoritos <span class="arrow">º</span></a>
           <ul>
-            <li><a href="lista_favoritos.html">Lista de Favoritos</a></li>
+            <li><a href="lista_favoritos.html">Lista de Artigos</a></li>
             <li><a href="pesquisar_atividades.html">Pesquisar Atividades</a></li>
           </ul>
         </li>
@@ -374,40 +410,230 @@ z
 <main class="content">
 
   <h2 style="color: var(--cor-laranja); margin-bottom: 1rem;">
-    Ajuda
+    Carrinho
   </h2>
 
-  <div style="display: flex; flex-direction: column; gap: 2rem; font-family: 'Segoe UI','Roboto','Open Sans',sans-serif;">
+  <div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
+    <input type="text" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; width: 220px;">
+    <button class="botao-guardar" style="margin-left: 0.5rem;">Pesquisar</button>
+  </div>
 
-    <div style="background-color: var(--cor-secundaria); border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: flex; flex-direction: column; gap: 1.5rem;">
+  <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">As experiências que tens no teu carrinho?</h3>
 
-      <div style="display: flex; flex-direction: column; gap: 1rem;">
-        <h3 style="color: var(--cor-terciaria);">Contactos</h3>
-        <div style="display: flex; flex-direction: column; gap: 0.7rem;">
-          <div style="font-size: 0.95rem; color: #333;">Email: suporte@travelx.pt</div>
-          <div style="font-size: 0.95rem; color: #333;">Telefone: +351 291 000 000</div>
-          <div style="font-size: 0.95rem; color: #333;">Horário: Segunda a Sexta, 09:00 – 18:00</div>
-        </div>
-      </div>
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 
-      <div style="display: flex; flex-direction: column; gap: 1rem;">
-        <h3 style="color: var(--cor-terciaria);">Contacto Direto</h3>
-        <input type="text" style="padding: 0.6rem; border: 1px solid #ccc; border-radius: 4px;" placeholder="O teu nome">
-        <input type="email" style="padding: 0.6rem; border: 1px solid #ccc; border-radius: 4px;" placeholder="O teu email">
-        <textarea style="padding: 0.6rem; border: 1px solid #ccc; border-radius: 4px; height: 120px;" placeholder="A tua mensagem"></textarea>
-      </div>
+ <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="carreiros.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Homem nos Carreiros do Monte</div>
 
-      <div style="margin-top: 1rem;">
-        <button class="botao-enviar">Enviar Mensagem</button>
-      </div>
+  <input type="checkbox" id="toggle-homemcarreiros" class="accordion-checkbox" hidden>
+  <label for="toggle-homemcarreiros" class="accordion-toggle">Ver detalhes</label>
 
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Resumo</strong>
+      <p>Descida tradicional nos carros de cesto, guiada pelos carreiros do Monte. Uma experiência cultural e divertida.</p>
     </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Classificação</strong>
+      <div style="font-size: 1.2rem; color: gold;">★★★★★</div>
+      <div style="opacity: 0.7; font-size: 0.9rem;">Baseado em 187 avaliações</div>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="sofia10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Sofia:</strong> Trilho mágico do início ao fim.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ricardo10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ricardo:</strong> A lagoa é surreal.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="maria10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Maria:</strong> Recomendo levar lanterna.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Idioma</strong>
+      <p>Português, Inglês</p>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Participantes</strong>
+      <input type="number" min="1" value="1" style="padding: 0.4rem; width: 80px; border-radius: 6px; border: 1px solid #ccc;">
+    </div>
+
+    <div class="custo-finalizar">
+      <div class="valor">
+        <div>Custo</div>
+        <div>25 €</div>
+      </div>
+      <a href="finalizar_roteiro.html">
+        <button class="botao-finalizar">Finalizar</button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="golfinho.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Homem a Ver Golfinhos</div>
+
+  <input type="checkbox" id="toggle-homemgolfinhos" class="accordion-checkbox" hidden>
+  <label for="toggle-homemgolfinhos" class="accordion-toggle">Ver detalhes</label>
+
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Resumo</strong>
+      <p>Passeio de barco para observar golfinhos e baleias ao largo da Madeira.</p>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Classificação</strong>
+      <div style="font-size: 1.2rem; color: gold;">★★★★★</div>
+      <div style="opacity: 0.7; font-size: 0.9rem;">Baseado em 302 avaliações</div>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="sofia10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Sofia:</strong> Trilho mágico do início ao fim.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ricardo10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ricardo:</strong> A lagoa é surreal.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="maria10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Maria:</strong> Recomendo levar lanterna.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Idioma</strong>
+      <p>Português, Inglês, Espanhol</p>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Participantes</strong>
+      <input type="number" min="1" value="1" style="padding: 0.4rem; width: 80px; border-radius: 6px; border: 1px solid #ccc;">
+    </div>
+
+    <div class="custo-finalizar">
+      <div class="valor">
+        <div>Custo</div>
+        <div>45 €</div>
+      </div>
+      <a href="finalizar_roteiro.html">
+        <button class="botao-finalizar">Finalizar</button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+   
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background-color: var(--cor-secundaria); display: flex; flex-direction: column; gap: 1.5rem;">
+  <img src="parapente.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Homem a Fazer Parapente</div>
+
+  <input type="checkbox" id="toggle-homemparapente" class="accordion-checkbox" hidden>
+  <label for="toggle-homemparapente" class="accordion-toggle">Ver detalhes</label>
+
+  <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Resumo</strong>
+      <p>Voo de parapente sobre as montanhas e falésias da Madeira, com vistas impressionantes.</p>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Classificação</strong>
+      <div style="font-size: 1.2rem; color: gold;">★★★★★</div>
+      <div style="opacity: 0.7; font-size: 0.9rem;">Baseado em 156 avaliações</div>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Comentários</strong>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="sofia10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Sofia:</strong> Trilho mágico do início ao fim.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="ricardo10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Ricardo:</strong> A lagoa é surreal.</div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="maria10.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+          <div><strong>Maria:</strong> Recomendo levar lanterna.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Idioma</strong>
+      <p>Português, Inglês</p>
+    </div>
+
+    <div>
+      <strong style="color: var(--cor-terciaria);">Participantes</strong>
+      <input type="number" min="1" value="1" style="padding: 0.4rem; width: 80px; border-radius: 6px; border: 1px solid #ccc;">
+    </div>
+
+    <div class="custo-finalizar">
+      <div class="valor">
+        <div>Custo</div>
+        <div>90 €</div>
+      </div>
+      <a href="finalizar_roteiro.html">
+        <button class="botao-finalizar">Finalizar</button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
 
   </div>
 
 </main>
-
-
 
 
 </div>
