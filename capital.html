@@ -464,8 +464,8 @@ body {
       <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: Gratuito</strong></div>
 
       <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Estátua CR7')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Estátua CR7')">Adicionar aos Favoritos</button>
+        <button class="botao" >Adicionar ao Carrinho</button>
+        <button class="botao" >Adicionar aos Favoritos</button>
       </div>
 
     </div>
@@ -525,8 +525,8 @@ body {
       <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: Gratuito</strong></div>
 
       <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Miradouro das Neves')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Miradouro das Neves')">Adicionar aos Favoritos</button>
+        <button class="botao" >Adicionar ao Carrinho</button>
+        <button class="botao" >Adicionar aos Favoritos</button>
       </div>
 
     </div>
@@ -587,8 +587,8 @@ body {
       <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: Gratuito</strong></div>
 
       <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Zona Velha')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Zona Velha')">Adicionar aos Favoritos</button>
+        <button class="botao" >Adicionar ao Carrinho</button>
+        <button class="botao" >Adicionar aos Favoritos</button>
       </div>
 
     </div>
@@ -646,8 +646,8 @@ body {
       <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: Gratuito</strong></div>
 
       <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Miradouro Pico dos Barcelos')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Miradouro Pico dos Barcelos')">Adicionar aos Favoritos</button>
+        <button class="botao" >Adicionar ao Carrinho</button>
+        <button class="botao" >Adicionar aos Favoritos</button>
       </div>
 
     </div>
@@ -659,34 +659,6 @@ body {
   </div>
 
 </main>
-<script>
- function adicionarCarrinho(nome) {
-  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-
-  if (carrinho.includes(nome)) {
-    alert(`${nome} já está no carrinho.`);
-    return;
-  }
-
-  carrinho.push(nome);
-  localStorage.setItem('carrinho', JSON.stringify(carrinho));
-  alert(`${nome} foi adicionado ao carrinho.`);
-}
-
- function adicionarFavoritos(nome) {
-  const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-
-  if (favoritos.includes(nome)) {
-    alert(`${nome} já está nos favoritos.`);
-    return;
-  }
-
-  favoritos.push(nome);
-  localStorage.setItem('favoritos', JSON.stringify(favoritos));
-  alert(`${nome} foi adicionado aos favoritos.`);
-}
-
-</script>
 
 
 

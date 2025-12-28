@@ -426,7 +426,7 @@ body {
     <div class="card">
       <img src="levadas.png" alt="Levada – 25 Fontes" style="width: 100%; border-radius: 6px;">
       <div class="card-title">Levada – 25 Fontes</div>
-      <div class="card-content">Preço: 35€ – 45€</div>
+      <div class="card-content">Preço: Gratuito</div>
     </div>
 
     <div class="card">
@@ -487,18 +487,18 @@ body {
 <script>
   function gerarRoteiro() {
     const experiencias = [
-      { img: "cultura.png", titulo: "Teatro", tipo: "curta", preco: "10€ – 20€" },
-      { img: "bowling.png", titulo: "Bowling", tipo: "curta", preco: "5€ – 8€" },
-      { img: "carreiros.png", titulo: "Carreiros do Monte", tipo: "curta", preco: "27,50€" },
-      { img: "padel.png", titulo: "Padel", tipo: "media", preco: "12€ – 20€" },
-      { img: "parapente.png", titulo: "Parapente", tipo: "media", preco: "90€ – 120€" },
-      { img: "4x4.png", titulo: "Passeio 4x4", tipo: "media", preco: "35€ – 50€" },
-      { img: "levadas.png", titulo: "Levada – 25 Fontes", tipo: "longa", preco: "35€ – 45€" },
-      { img: "golfinho.png", titulo: "Observação de Golfinhos", tipo: "curta", preco: "35€ – 45€" },
-      { img: "picodoariero.png", titulo: "Pico do Areeiro", tipo: "curta", preco: "Gratuito" },
-      { img: "cabogirao.png", titulo: "Cabo Girão", tipo: "curta", preco: "Gratuito" },
-      { img: "mercadolavradores.png", titulo: "Mercado dos Lavradores", tipo: "curta", preco: "Entrada gratuita" },
-      { img: "portosanto.png", titulo: "Porto Santo", tipo: "exclusivo", preco: "50€ – 60€" }
+      { img: "cultura.png", titulo: "Teatro", tipo: "curta" },
+      { img: "bowling.png", titulo: "Bowling", tipo: "curta" },
+      { img: "carreiros.png", titulo: "Carreiros do Monte", tipo: "curta" },
+      { img: "padel.png", titulo: "Padel", tipo: "media" },
+      { img: "parapente.png", titulo: "Parapente", tipo: "media" },
+      { img: "4x4.png", titulo: "Passeio 4x4", tipo: "media" },
+      { img: "levadas.png", titulo: "Levada – 25 Fontes", tipo: "longa" },
+      { img: "golfinho.png", titulo: "Observação de Golfinhos", tipo: "curta" },
+      { img: "picodoariero.png", titulo: "Pico do Areeiro", tipo: "curta" },
+      { img: "cabogirao.png", titulo: "Cabo Girão", tipo: "curta" },
+      { img: "mercadolavradores.png", titulo: "Mercado dos Lavradores", tipo: "curta" },
+      { img: "portosanto.png", titulo: "Porto Santo", tipo: "exclusivo" }
     ];
 
     const selecionadas = [];
@@ -553,12 +553,12 @@ body {
         <div class="card">
           <img src="${exp.img}" style="width: 100%; border-radius: 6px;">
           <div class="card-title">${exp.titulo}</div>
-          <div class="card-content">Preço: ${exp.preco}</div>
         </div>
       `;
     });
   }
 </script>
+
 
 
 

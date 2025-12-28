@@ -473,8 +473,8 @@ body {
       <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: Gratuito</strong></div>
 
       <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Casas de Santana')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Casas de Santana')">Adicionar aos Favoritos</button>
+        <button class="botao" >Adicionar ao Carrinho</button>
+        <button class="botao" >Adicionar aos Favoritos</button>
       </div>
 
     </div>
@@ -535,8 +535,8 @@ body {
       <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: Gratuito</strong></div>
 
       <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Miradouro do Guindaste')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Miradouro do Guindaste')">Adicionar aos Favoritos</button>
+        <button class="botao">Adicionar ao Carrinho</button>
+        <button class="botao" >Adicionar aos Favoritos</button>
       </div>
 
     </div>
@@ -599,8 +599,8 @@ body {
       <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: Gratuito</strong></div>
 
       <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Praia do Seixal')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Praia do Seixal')">Adicionar aos Favoritos</button>
+        <button class="botao" >Adicionar ao Carrinho</button>
+        <button class="botao" >Adicionar aos Favoritos</button>
       </div>
 
     </div>
@@ -659,8 +659,8 @@ body {
       <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: Gratuito</strong></div>
 
       <div style="display: flex; gap: 1rem;">
-        <button class="botao" onclick="adicionarCarrinho('Parque Temático da Madeira')">Adicionar ao Carrinho</button>
-        <button class="botao" onclick="adicionarFavoritos('Parque Temático da Madeira')">Adicionar aos Favoritos</button>
+        <button class="botao" >Adicionar ao Carrinho</button>
+        <button class="botao" >Adicionar aos Favoritos</button>
       </div>
 
     </div>
@@ -672,34 +672,7 @@ body {
   </div>
 
 </main>
-<script>
- function adicionarCarrinho(nome) {
-  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-  if (carrinho.includes(nome)) {
-    alert(`${nome} já está no carrinho.`);
-    return;
-  }
-
-  carrinho.push(nome);
-  localStorage.setItem('carrinho', JSON.stringify(carrinho));
-  alert(`${nome} foi adicionado ao carrinho.`);
-}
-
- function adicionarFavoritos(nome) {
-  const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-
-  if (favoritos.includes(nome)) {
-    alert(`${nome} já está nos favoritos.`);
-    return;
-  }
-
-  favoritos.push(nome);
-  localStorage.setItem('favoritos', JSON.stringify(favoritos));
-  alert(`${nome} foi adicionado aos favoritos.`);
-}
-
-</script>
 
 
 
