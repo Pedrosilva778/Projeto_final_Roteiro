@@ -412,7 +412,7 @@ body {
 <main class="content">
 
   <h2 style="color: var(--cor-laranja); margin-bottom: 1rem;">
-    Coisas para Fazer 
+ Favoritos 
   </h2>
 
   <div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
@@ -420,7 +420,7 @@ body {
     <button class="botao-guardar" style="margin-left: 0.5rem;">Pesquisar</button>
   </div>
 
-  <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Melhores Experiências</h3>
+  <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Pesquisar Atividades</h3>
 
   <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 
@@ -677,7 +677,7 @@ body {
     Não sabes o que fazer? Gera um roteiro de um dia para ti com as tuas atividades favoritas!
   </div>
 
-  <button onclick="gerarRoteiro()" class="botao-roteiro">
+  <button  class="botao">
     Gerar Roteiro Aleatório
   </button>
 
@@ -698,76 +698,7 @@ body {
 
 
 </main>
-<script>
-function gerarRoteiro() {
 
- 
-  const duracoes = {
-    curta: 1,
-    media: 2
-  };
-
- 
-  const experiencias = [
-    { img: "carreiros.png", titulo: "Carreiros do Monte", tipo: "curta", preco: "27,50€" },
-    { img: "golfinho.png", titulo: "Observação de Golfinhos", tipo: "curta", preco: "35€ – 45€" },
-    { img: "4x4.png", titulo: "Passeio 4x4", tipo: "media", preco: "35€ – 50€" },
-    { img: "cultura.png", titulo: "Teatro", tipo: "curta", preco: "10€ – 20€" }
-  ];
-
-  const DIA_HORAS = 8;
-  let horasUsadas = 0;
-  const selecionadas = [];
-
-  
-  const shuffle = arr => arr.sort(() => Math.random() - 0.5);
-  const lista = shuffle(experiencias);
-
-  
-  for (const exp of lista) {
-    const dur = duracoes[exp.tipo];
-
-    if (horasUsadas + dur <= DIA_HORAS) {
-      selecionadas.push(exp);
-      horasUsadas += dur;
-    }
-  }
-
- 
-  const container = document.getElementById("roteiro-cards");
-  container.innerHTML = "";
-
-  const bloco = document.getElementById("roteiro-container");
-  bloco.style.display = "block";
-
-  const frase = document.querySelector("#roteiro-container h3");
-
-  if (selecionadas.length === 4) {
-    frase.innerText = "Dia cheio! Quatro experiências perfeitas para ti!";
-  } else if (selecionadas.length === 3) {
-    frase.innerText = "Três experiências que encaixam perfeitamente no teu dia!";
-  } else if (selecionadas.length === 2) {
-    frase.innerText = "Um dia equilibrado com duas atividades!";
-  } else {
-    frase.innerText = "Uma experiência especial só para ti!";
-  }
-
-  container.style.display = "grid";
-  container.style.gridTemplateColumns = "repeat(4, 1fr)";
-  container.style.justifyItems = "center";
-  container.style.gap = "1.5rem";
-
-  selecionadas.forEach(exp => {
-    container.innerHTML += `
-      <div class="card">
-        <img src="${exp.img}" style="width: 100%; border-radius: 6px;">
-        <div class="card-title">${exp.titulo}</div>
-        <div class="card-content">Preço: ${exp.preco}</div>
-      </div>
-    `;
-  });
-}
-</script>
 
 
 
