@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoAlunos - Serviço de Informação dos Alunos</title>
+
+<style>
+
+:root {
+  --cor-primaria: #3399ff;
+  --cor-secundaria: white;
+  --cor-terciaria: #003d7a;
+  --cor-cinzento: #6c757d;
+  --cor-verde: #198754;
+  --cor-vermelho: #dc3545;
+  --cor-laranja: #ffa500;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+  background-color: var(--cor-secundaria);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--cor-laranja);
+    padding: 3rem 2rem;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.site-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.form-label {
+    margin-bottom: 0.4rem;
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.form-control::placeholder {
+    color: #666;
+}
+
+.form-control:user-valid {
+    border: 2px solid var(--cor-verde);
+}
+
+.form-control:user-invalid {
+    border: 2px solid var(--cor-vermelho);
+}
+
+.btn-login {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-laranja);
+    border: 1px solid var(--cor-secundaria);
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-login:hover {
+    background-color: #f2f2f2;
+}
+
+.error-message {
+    background-color: rgba(0,0,0,0.15);
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    text-align: left;
+    line-height: 1.4;
+    border-radius: 4px;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<main class="login-container">
+
+    <h1 class="site-title">Aceda à sua conta</h1>
+
+    <form>
+        <div class="form-group">
+            <label class="form-label" for="aluno">N.º de Aluno</label>
+            <input id="aluno" type="text" class="form-control" placeholder="N.º de Aluno" required minlength="4">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <input id="password" type="password" class="form-control" placeholder="Password" required minlength="4">
+        </div>
+
+        <button type="button" class="btn-login" onclick="login()">Entrar</button>
+        <a href="registo.html" class="btn-login" style="margin-top: 0.5rem; background-color: transparent; color: white; border: 1px solid white;">
+    Registar
+</a>
+
+    </form>
+
+</main>
+
+<script>
+function login() {
+    const aluno = document.getElementById("aluno").value.trim();
+    const pass = document.getElementById("password").value.trim();
+
+    if (aluno === "1234" && pass === "1234") {
+        window.location.href = "layout.html";
+    } else {
+        alert("Credenciais inválidas.");
+    }
+}
+</script>
+
+
+</body>
+</html>
