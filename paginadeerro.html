@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erro 404 - Página Não Encontrada</title>
+<style>
+:root{
+    --cor-primaria: #3399ff;
+    --cor-secundaria: white;
+    --cor-terciaria: #003d7a;
+    --cor-cinzento:#6c757d;
+    --cor-verde:#198754;
+    --cor-vermelho:#dc3545; 
+    --cor-laranja:#ffa500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e0eaff, #ffffff);
+    color: #333;
+}
+
+.error-container {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 400px;
+    width: 90%;
+}
+
+.error-container h1 {
+    font-size: 8rem;
+    color: var(--cor-vermelho);
+    margin-bottom: 20px;
+    font-weight: 900;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+}
+
+.error-container p {
+    font-size: 1.2rem;
+    color: var(--cor-terciaria);
+    margin-bottom: 30px;
+}
+
+.error-container a {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-laranja);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.error-container a:hover {
+    background-color: var(--cor-cinzento);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.alerta-erro {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    background-color: var(--cor-vermelho);
+    color: var(--cor-secundaria);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+
+@media (max-width: 480px) {
+    .error-container h1 {
+        font-size: 5rem;
+    }
+    .error-container p {
+        font-size: 1rem;
+    }
+    .error-container a {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+    .alerta-erro svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="error-container">
+    <h1>404</h1>
+    <p>Oops! A página que você procura não existe ou foi removida.</p>
+    <a href="layout.html">Voltar para a Página Inicial</a>
+</div>
+
+</body>
+</html>

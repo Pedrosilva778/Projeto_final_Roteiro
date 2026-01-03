@@ -107,6 +107,14 @@ body {
     line-height: 1.4;
     border-radius: 4px;
 }
+.info-box {
+    background-color: rgba(0,0,0,0.15);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    text-align: center;
+}
 
 </style>
 
@@ -119,10 +127,14 @@ body {
 
     <h1 class="site-title">Aceda à sua conta</h1>
 
+    <div class="info-box">
+        Só pode entrar com o user <b>1234</b> e a password <b>1234</b>.
+    </div>
+
     <form>
         <div class="form-group">
-            <label class="form-label" for="aluno">N.º de Aluno</label>
-            <input id="aluno" type="text" class="form-control" placeholder="N.º de Aluno" required minlength="4">
+            <label class="form-label" for="user">User</label>
+            <input id="user" type="text" class="form-control" placeholder="User" required minlength="4">
         </div>
 
         <div class="form-group">
@@ -131,26 +143,28 @@ body {
         </div>
 
         <button type="button" class="btn-login" onclick="login()">Entrar</button>
-        <a href="registo.html" class="btn-login" style="margin-top: 0.5rem; background-color: transparent; color: white; border: 1px solid white;">
-    Registar
-</a>
 
+        <a href="registo.html" class="btn-login" style="margin-top: 0.5rem; background-color: transparent; color: white; border: 1px solid white;">
+            Registar
+        </a>
     </form>
 
 </main>
 
 <script>
 function login() {
-    const aluno = document.getElementById("aluno").value.trim();
+    const user = document.getElementById("user").value.trim();
     const pass = document.getElementById("password").value.trim();
 
-    if (aluno === "1234" && pass === "1234") {
+    if (user === "1234" && pass === "1234") {
         window.location.href = "layout.html";
     } else {
         alert("Credenciais inválidas.");
     }
 }
 </script>
+
+
 
 
 </body>
