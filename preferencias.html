@@ -15,17 +15,32 @@
   --cor-verde: #198754;
   --cor-vermelho: #dc3545;
   --cor-laranja: #ffa500;
+
+  --bg: #ffffff;
+  --texto: #333333;
+  --card-bg: #ffffff;
+  --menu-bg: #6c757d;
+  --borda: #dddddd;
+}
+
+body:has(select#tema option[value="escuro"]:checked) {
+  --bg: #121212;
+  --texto: #e6e6e6;
+  --card-bg: #1e1e1e;
+  --menu-bg: #2a2a2a;
+  --borda: #444444;
+  --cor-cinzento: #999999;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-  background-color: var(--cor-secundaria);
+  font-family: 'Segoe UI','Roboto','Open Sans',sans-serif;
+  background-color: var(--bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: #333;
+  color: var(--texto);
 }
 
 .header {
@@ -40,10 +55,7 @@ body {
 
 .header-left { display: flex; align-items: center; gap: 1rem; }
 
-.logo-header {
-  width: 90px;
-  height: auto;
-}
+.logo-header { width: 90px; height: auto; }
 
 .header-title { font-size: 1.1rem; font-weight: 600; }
 
@@ -70,7 +82,7 @@ body {
 
 .menu {
   width: 240px;
-  background-color: var(--cor-cinzento);
+  background-color: var(--menu-bg);
   padding-top: 20px;
   flex-shrink: 0;
 }
@@ -87,16 +99,13 @@ body {
   transition: background 0.3s;
 }
 
-.menu > ul > li:hover > a {
-  background-color: var(--cor-laranja);
-}
-
+.menu > ul > li:hover > a { background-color: var(--cor-laranja); }
 
 .menu li ul {
   display: none;
   position: absolute;
   top: 0; left: 100%;
-  background-color: var(--cor-secundaria);
+  background-color: var(--card-bg);
   min-width: 220px;
   box-shadow: 2px 0 8px rgba(0,0,0,0.1);
   z-index: 10;
@@ -117,14 +126,13 @@ body {
   color: var(--cor-secundaria);
 }
 
-
 .arrow { font-size: 14px; color: var(--cor-secundaria); }
 
 .content {
   flex: 1;
   padding: 1.5rem;
   overflow-y: auto;
-  background-color: var(--cor-secundaria);
+  background-color: var(--bg);
   min-width: 0;
 }
 
@@ -136,11 +144,12 @@ body {
 }
 
 .card {
-  background-color: var(--cor-secundaria);
-  border: 1px solid #ddd;
+  background-color: var(--card-bg);
+  border: 1px solid var(--borda);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  color: var(--texto);
 }
 
 .card-title {
@@ -149,99 +158,38 @@ body {
   margin-bottom: 0.75rem;
   color: var(--cor-laranja);
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--borda);
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.card-content { font-size: 0.9rem; color: #666; }
+.card-content { font-size: 0.9rem; color: var(--texto); }
 
 .warning-icon { font-size: 1.1rem; color: var(--cor-laranja); }
 
-
-
 @media (max-width: 992px) {
-
-  .container {
-    flex-direction: column;
-  }
-
-  .menu {
-    width: 100%;
-    position: relative;
-    padding: 0;
-  }
-
-  .menu li ul {
-    position: relative;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    box-shadow: none;
-  }
-
-  .menu li:hover ul {
-    display: block;
-  }
-
-  .menu > ul > li > a {
-    padding: 12px 15px;
-  }
-
-  .content {
-    padding: 1rem;
-  }
-
-  .main-grid, .bottom-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .top-links {
-    justify-content: flex-start;
-    gap: 1rem;
-  }
+  .container { flex-direction: column; }
+  .menu { width: 100%; position: relative; padding: 0; }
+  .menu li ul { position: relative; top: 0; left: 0; min-width: 100%; box-shadow: none; }
+  .menu li:hover ul { display: block; }
+  .menu > ul > li > a { padding: 12px 15px; }
+  .content { padding: 1rem; }
+  .main-grid, .bottom-grid { grid-template-columns: 1fr; }
+  .top-links { justify-content: flex-start; gap: 1rem; }
 }
-
 
 @media (max-width: 480px) {
-
-  .header-left {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .header-title {
-    font-size: 0.95rem;
-  }
-
-  .language-selector {
-    font-size: 0.8rem;
-    padding: 0.2rem 0.4rem;
-  }
-
-  .user-profile {
-    width: 35px;
-    height: 35px;
-  }
-
-  .menu > ul > li > a {
-    font-size: 0.9rem;
-  }
-
-  .card-title {
-    font-size: 0.95rem;
-  }
-
-  .card-content, table {
-    font-size: 0.8rem;
-  }
-
-  th, td {
-    padding: 0.45rem;
-  }
+  .header-left { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .header-title { font-size: 0.95rem; }
+  .language-selector { font-size: 0.8rem; padding: 0.2rem 0.4rem; }
+  .user-profile { width: 35px; height: 35px; }
+  .menu > ul > li > a { font-size: 0.9rem; }
+  .card-title { font-size: 0.95rem; }
+  .card-content, table { font-size: 0.8rem; }
+  th, td { padding: 0.45rem; }
 }
+
 .botao-guardar {
   margin-top: 1rem;
   width: 220px;
@@ -257,8 +205,19 @@ body {
   transition: background-color 0.3s;
 }
 
-.botao-guardar:hover {
-  background-color: var(--cor-cinzento);
+.botao-guardar:hover { background-color: var(--cor-cinzento); }
+footer {
+  background-color: var(--card-bg) !important;
+  color: var(--texto) !important;
+  border-top: 1px solid var(--borda) !important;
+}
+
+footer a {
+  color: var(--texto) !important;
+}
+
+footer strong {
+  color: var(--cor-laranja) !important;
 }
 
 </style>
@@ -383,17 +342,17 @@ body {
 </nav>
 
 
-   <main class="content">
+  <main class="content">
 
   <h2 style="color: var(--cor-laranja); margin-bottom: 1rem;">
     Preferências
   </h2>
 
-  <div style="background-color: var(--cor-secundaria); border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: flex; flex-direction: column; gap: 1.5rem; font-family: 'Segoe UI','Roboto','Open Sans',sans-serif;">
+  <form style="background-color: var(--card-bg); border: 1px solid var(--borda); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: flex; flex-direction: column; gap: 1.5rem; font-family: 'Segoe UI','Roboto','Open Sans',sans-serif;">
 
     <div>
       <label style="font-weight: 600; color: var(--cor-terciaria);">Idioma</label>
-      <select style="margin-top: 0.4rem; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; width: 220px; font-family: inherit;">
+      <select style="margin-top: 0.4rem; padding: 0.5rem; border: 1px solid var(--borda); border-radius: 4px; width: 220px; font-family: inherit;">
         <option value="pt">Português</option>
         <option value="en">Inglês</option>
       </select>
@@ -401,7 +360,7 @@ body {
 
     <div>
       <label style="font-weight: 600; color: var(--cor-terciaria);">Tema</label>
-      <select style="margin-top: 0.4rem; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; width: 220px; font-family: inherit;">
+      <select id="tema" style="margin-top: 0.4rem; padding: 0.5rem; border: 1px solid var(--borda); border-radius: 4px; width: 220px; font-family: inherit;">
         <option value="claro">Claro</option>
         <option value="escuro">Escuro</option>
       </select>
@@ -409,17 +368,16 @@ body {
 
     <div>
       <label style="font-weight: 600; color: var(--cor-terciaria);">Moeda para pagamento</label>
-      <select style="margin-top: 0.4rem; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; width: 220px; font-family: inherit;">
+      <select style="margin-top: 0.4rem; padding: 0.5rem; border: 1px solid var(--borda); border-radius: 4px; width: 220px; font-family: inherit;">
         <option value="eur">Euro (€)</option>
         <option value="usd">Dólar ($)</option>
         <option value="gbp">Libra (£)</option>
       </select>
     </div>
 
-    <button class="botao-guardar">Guardar</button>
+    <button type="submit" class="botao-guardar">Guardar</button>
 
-
-  </div>
+  </form>
 
 </main>
 
