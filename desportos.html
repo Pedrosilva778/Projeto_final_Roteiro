@@ -189,6 +189,12 @@ body {
 
 
 
+.lugares-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
 @media (max-width: 992px) {
 
   .container {
@@ -228,6 +234,10 @@ body {
   .top-links {
     justify-content: flex-start;
     gap: 1rem;
+  }
+
+  .lugares-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -269,7 +279,15 @@ body {
   th, td {
     padding: 0.45rem;
   }
+
+  
+  .lugares-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+
+
 .accordion-toggle {
   background-color: var(--cor-laranja);
   color: white;
@@ -395,7 +413,10 @@ body:has(details#toggleTema[open]) {
   text-decoration: underline;
 }
 
+
+
 </style>
+
 
 </head>
 
@@ -533,30 +554,31 @@ body:has(details#toggleTema[open]) {
 
   <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Desportos</h3>
 
-  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+  <div class="lugares-grid" style="margin-bottom: 2rem;">
+
 
   
  <div class="card">
 
-  <img src="surf_jardimdomar.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Surf — Jardim do Mar</div>
+  <img src="bowling.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Bowling</div>
 
-  <input type="checkbox" id="toggle-surf" class="accordion-checkbox" hidden>
-  <label for="toggle-surf" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-bowling" class="accordion-checkbox" hidden>
+  <label for="toggle-bowling" class="accordion-toggle">Ver detalhes</label>
 
   <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
     <div>
       <strong style="color: var(--cor-terciaria);">Descrição</strong>
-      <p>Um dos spots de surf mais famosos da Europa, conhecido pelas ondas grandes e perfeitas no inverno.</p>
+      <p>Atividade divertida e acessível para todas as idades, ideal para grupos, famílias e momentos de lazer.</p>
     </div>
 
     <div>
       <strong style="color: var(--cor-terciaria);">Destaques</strong>
       <ul style="margin-left: 1rem;">
-        <li>Ondas potentes</li>
-        <li>Ambiente de surf clássico</li>
-        <li>Ideal para surfistas experientes</li>
+        <li>Ambiente descontraído</li>
+        <li>Perfeito para grupos</li>
+        <li>Atividade indoor</li>
       </ul>
     </div>
 
@@ -566,17 +588,17 @@ body:has(details#toggleTema[open]) {
 
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <img src="maisboneco.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          <div><strong>Mais Boneco:</strong> Ondas incríveis, nível mundial.</div>
+          <div><strong>Mais Boneco:</strong> Ótimo para passar a tarde com amigos.</div>
         </div>
 
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <img src="marble.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          <div><strong>Marble:</strong> Spot lindo mas exigente.</div>
+          <div><strong>Marble:</strong> Ambiente divertido e boas pistas.</div>
         </div>
 
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <img src="menork.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          <div><strong>MenorK:</strong> Para quem gosta de adrenalina.</div>
+          <div><strong>MenorK:</strong> Sempre uma boa escolha para relaxar.</div>
         </div>
 
       </div>
@@ -585,19 +607,20 @@ body:has(details#toggleTema[open]) {
     <details style="margin-top: 1rem;">
       <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
       <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
-        <div><strong>Nível recomendado?</strong> Avançado.</div>
-        <div><strong>Melhor época?</strong> Inverno.</div>
-        <div><strong>É pago?</strong> Não.</div>
+        <div><strong>É preciso experiência?</strong> Não, qualquer pessoa pode jogar.</div>
+        <div><strong>É indoor?</strong> Sim, ideal para dias de chuva.</div>
+        <div><strong>Preço?</strong> 5€ – 8€ por pessoa.</div>
       </div>
     </details>
 
     <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
-      <button class="botao" style="padding: 0.4rem 0.6rem;" >Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;">Adicionar ao Carrinho</button>
       <button class="botao" style="padding: 0.4rem 0.6rem;">Adicionar aos Favoritos</button>
     </div>
 
   </div>
 </div>
+
 
 
 <div class="card">
@@ -670,25 +693,25 @@ body:has(details#toggleTema[open]) {
     
 <div class="card">
 
-  <img src="maritimo.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Club Sport Marítimo</div>
+  <img src="padel.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Padel</div>
 
-  <input type="checkbox" id="toggle-maritimo" class="accordion-checkbox" hidden>
-  <label for="toggle-maritimo" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-padel" class="accordion-checkbox" hidden>
+  <label for="toggle-padel" class="accordion-toggle">Ver detalhes</label>
 
   <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
     <div>
       <strong style="color: var(--cor-terciaria);">Descrição</strong>
-      <p>O clube mais histórico da Madeira, fundado em 1910. Conhecido pela sua paixão, adeptos dedicados e pelo Estádio do Marítimo, um dos símbolos desportivos da ilha.</p>
+      <p>Desporto social e divertido, ideal para jogar com amigos ou família, acessível a todos os níveis.</p>
     </div>
 
     <div>
       <strong style="color: var(--cor-terciaria);">Destaques</strong>
       <ul style="margin-left: 1rem;">
-        <li>Jogos no Estádio do Marítimo</li>
-        <li>Ambiente vibrante dos adeptos</li>
-        <li>História centenária no futebol português</li>
+        <li>Fácil de aprender</li>
+        <li>Ótimo exercício físico</li>
+        <li>Perfeito para grupos</li>
       </ul>
     </div>
 
@@ -698,17 +721,17 @@ body:has(details#toggleTema[open]) {
 
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <img src="maisboneco.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          <div><strong>Mais Boneco:</strong> Ambiente incrível nos jogos!</div>
+          <div><strong>Mais Boneco:</strong> Jogo sempre que posso, super viciante.</div>
         </div>
 
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <img src="marble.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          <div><strong>Marble:</strong> Adeptos super apaixonados.</div>
+          <div><strong>Marble:</strong> Excelente para treinar e divertir ao mesmo tempo.</div>
         </div>
 
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <img src="menork.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          <div><strong>MenorK:</strong> Um dos símbolos da Madeira.</div>
+          <div><strong>MenorK:</strong> Boa energia e sempre dá para rir.</div>
         </div>
 
       </div>
@@ -717,19 +740,20 @@ body:has(details#toggleTema[open]) {
     <details style="margin-top: 1rem;">
       <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
       <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
-        <div><strong>Onde joga?</strong> Estádio do Marítimo, Funchal.</div>
-        <div><strong>É preciso bilhete?</strong> Sim, bilhete por jogo.</div>
-        <div><strong>É seguro?</strong> Sim, ambiente familiar.</div>
+        <div><strong>Nível recomendado?</strong> Qualquer nível, até iniciantes.</div>
+        <div><strong>É preciso equipamento?</strong> Raquete pode ser alugada.</div>
+        <div><strong>Preço?</strong> 12€ – 20€ por sessão.</div>
       </div>
     </details>
 
     <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
-      <button class="botao" style="padding: 0.4rem 0.6rem;" >Adicionar ao Carrinho</button>
-      <button class="botao" style="padding: 0.4rem 0.6rem;" >Adicionar aos Favoritos</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;">Adicionar aos Favoritos</button>
     </div>
 
   </div>
 </div>
+
 
 
 

@@ -189,6 +189,12 @@ body {
 
 
 
+.lugares-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
 @media (max-width: 992px) {
 
   .container {
@@ -228,6 +234,10 @@ body {
   .top-links {
     justify-content: flex-start;
     gap: 1rem;
+  }
+
+  .lugares-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -269,7 +279,15 @@ body {
   th, td {
     padding: 0.45rem;
   }
+
+  
+  .lugares-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+
+
 .accordion-toggle {
   background-color: var(--cor-laranja);
   color: white;
@@ -395,7 +413,10 @@ body:has(details#toggleTema[open]) {
   text-decoration: underline;
 }
 
+
+
 </style>
+
 
 </head>
 
@@ -533,7 +554,8 @@ body:has(details#toggleTema[open]) {
 
   <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Cultura</h3>
 
-  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+  <div class="lugares-grid" style="margin-bottom: 2rem;">
+
 
   
  <div class="card">
@@ -670,25 +692,25 @@ body:has(details#toggleTema[open]) {
     
 <div class="card">
 
-  <img src="bordado.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Bordado da Madeira</div>
+  <img src="cultura.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Teatro</div>
 
-  <input type="checkbox" id="toggle-bordado" class="accordion-checkbox" hidden>
-  <label for="toggle-bordado" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-teatro" class="accordion-checkbox" hidden>
+  <label for="toggle-teatro" class="accordion-toggle">Ver detalhes</label>
 
   <div class="accordion-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
 
     <div>
       <strong style="color: var(--cor-terciaria);">Descrição</strong>
-      <p>Um dos artesanatos mais finos da ilha, conhecido pela precisão, delicadeza e tradição passada de geração em geração.</p>
+      <p>Uma experiência cultural única, com peças que variam entre comédia, drama e produções locais, perfeitas para quem aprecia arte e espetáculo.</p>
     </div>
 
     <div>
       <strong style="color: var(--cor-terciaria);">Destaques</strong>
       <ul style="margin-left: 1rem;">
-        <li>Feito à mão</li>
-        <li>Desenhos florais</li>
-        <li>Tradição centenária</li>
+        <li>Produções locais e nacionais</li>
+        <li>Ambiente acolhedor</li>
+        <li>Ideal para amantes de cultura</li>
       </ul>
     </div>
 
@@ -698,17 +720,17 @@ body:has(details#toggleTema[open]) {
 
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <img src="kevin.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          <div><strong>Kevin O Chris:</strong> Trabalho lindíssimo e muito detalhado.</div>
+          <div><strong>Kevin O Chris:</strong> Peça muito divertida, valeu cada minuto.</div>
         </div>
 
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <img src="tony.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          <div><strong>Tony Carreira:</strong> Verdadeira arte madeirense.</div>
+          <div><strong>Tony Carreira:</strong> Excelente interpretação dos atores.</div>
         </div>
 
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <img src="numeiro.png" class="user-profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          <div><strong>Numeiro:</strong> Uma tradição que vale a pena conhecer.</div>
+          <div><strong>Numeiro:</strong> Boa opção para uma noite diferente.</div>
         </div>
 
       </div>
@@ -717,19 +739,20 @@ body:has(details#toggleTema[open]) {
     <details style="margin-top: 1rem;">
       <summary style="cursor: pointer; color: var(--cor-terciaria); font-weight: bold;">Perguntas Frequentes</summary>
       <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
-        <div><strong>É feito à mão?</strong> Sim, 100% artesanal.</div>
-        <div><strong>É caro?</strong> Depende da peça.</div>
-        <div><strong>Onde ver?</strong> Fábricas e lojas tradicionais.</div>
+        <div><strong>É preciso reservar?</strong> Recomendado, dependendo da peça.</div>
+        <div><strong>Duração média?</strong> 1h30 a 2h.</div>
+        <div><strong>Preço?</strong> 10€ – 20€.</div>
       </div>
     </details>
 
     <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
-      <button class="botao" style="padding: 0.4rem 0.6rem;" >Adicionar ao Carrinho</button>
-      <button class="botao" style="padding: 0.4rem 0.6rem;" >Adicionar aos Favoritos</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;">Adicionar ao Carrinho</button>
+      <button class="botao" style="padding: 0.4rem 0.6rem;">Adicionar aos Favoritos</button>
     </div>
 
   </div>
 </div>
+
 
 
 

@@ -189,6 +189,12 @@ body {
 
 
 
+.lugares-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
 @media (max-width: 992px) {
 
   .container {
@@ -228,6 +234,10 @@ body {
   .top-links {
     justify-content: flex-start;
     gap: 1rem;
+  }
+
+  .lugares-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -269,7 +279,15 @@ body {
   th, td {
     padding: 0.45rem;
   }
+
+  
+  .lugares-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+
+
 .accordion-toggle {
   background-color: var(--cor-laranja);
   color: white;
@@ -395,7 +413,10 @@ body:has(details#toggleTema[open]) {
   text-decoration: underline;
 }
 
+
+
 </style>
+
 
 </head>
 
@@ -533,7 +554,8 @@ body:has(details#toggleTema[open]) {
 
   <h3 style="color: var(--cor-terciaria); margin-bottom: 1rem;">Coisas para fazer no Funchal!</h3>
 
-  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+  <div class="lugares-grid" style="margin-bottom: 2rem;">
+
 
   
  <div class="card">
@@ -728,62 +750,73 @@ body:has(details#toggleTema[open]) {
 
 <div class="card">
 
-  <img src="museunatural.png" style="width: 100%; border-radius: 6px;">
-  <div class="card-title">Museu de História Natural do Funchal</div>
+  <img src="carreiros.png" style="width: 100%; border-radius: 6px;">
+  <div class="card-title">Carreiros do Monte</div>
 
-  <input type="checkbox" id="toggle-museunatural" class="accordion-checkbox" hidden>
-  <label for="toggle-museunatural" class="accordion-toggle">Ver detalhes</label>
+  <input type="checkbox" id="toggle-carreiros" class="accordion-checkbox" hidden>
+  <label for="toggle-carreiros" class="accordion-toggle">Ver detalhes</label>
 
   <div class="accordion-content">
     <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
 
-      <div><strong style="color: var(--cor-terciaria);">Destaques</strong>
+      <div>
+        <strong style="color: var(--cor-terciaria);">Destaques</strong>
         <ul>
-          <li>Fauna e flora da Madeira</li>
-          <li>Exposições educativas</li>
-          <li>Local histórico no centro</li>
+          <li>Descida tradicional em cestos</li>
+          <li>Experiência única na Madeira</li>
+          <li>Condutores experientes e trajados</li>
         </ul>
       </div>
 
-      <div><strong style="color: var(--cor-terciaria);">Descrição</strong>
-        <p>Museu dedicado à biodiversidade da Madeira, com coleções de animais, plantas e minerais.</p>
+      <div>
+        <strong style="color: var(--cor-terciaria);">Descrição</strong>
+        <p>Os famosos Carreiros do Monte proporcionam uma descida emocionante pelas ruas do Funchal, numa tradição centenária conduzida por carreiros experientes.</p>
       </div>
 
-      <div><strong style="color: var(--cor-terciaria);">Itinerário</strong>
-        <p>Entrada → Exposições → Sala temática → Regresso.</p>
+      <div>
+        <strong style="color: var(--cor-terciaria);">Itinerário</strong>
+        <p>Monte → Descida nos cestos → Chegada ao Livramento.</p>
       </div>
 
-      <div><strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
+      <div>
+        <strong style="color: var(--cor-terciaria);">Incluído no Serviço</strong>
         <ul>
-          <li>Entrada no museu</li>
+          <li>Descida no carro de cesto</li>
+          <li>Condutores tradicionais</li>
         </ul>
       </div>
 
-      <div><strong style="color: var(--cor-terciaria);">Informações</strong>
+      <div>
+        <strong style="color: var(--cor-terciaria);">Informações</strong>
         <ul>
-          <li>Duração: 45 min</li>
-          <li>Localização: Centro do Funchal</li>
+          <li>Duração: 10 min</li>
+          <li>Localização: Monte, Funchal</li>
+          <li>Atividade icónica da Madeira</li>
         </ul>
       </div>
 
-      <div><strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
+      <div>
+        <strong style="color: var(--cor-terciaria);">Outras Sugestões</strong>
         <ul>
-          <li>Zona Velha</li>
-          <li>Estátua CR7</li>
-          <li>Miradouro das Neves</li>
+          <li>Jardim Tropical Monte Palace</li>
+          <li>Igreja do Monte</li>
+          <li>Teleférico do Funchal</li>
         </ul>
       </div>
 
-      <div><strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 3€</strong></div>
+      <div>
+        <strong style="color: var(--cor-terciaria); font-size: 1.1rem;">Preço: 27,50€</strong>
+      </div>
 
       <div style="display: flex; gap: 1rem;">
-        <button class="botao" >Adicionar ao Carrinho</button>
-        <button class="botao" >Adicionar aos Favoritos</button>
+        <button class="botao">Adicionar ao Carrinho</button>
+        <button class="botao">Adicionar aos Favoritos</button>
       </div>
 
     </div>
   </div>
 </div>
+
 
 
 

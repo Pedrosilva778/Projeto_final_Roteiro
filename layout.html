@@ -229,6 +229,10 @@ body {
     justify-content: flex-start;
     gap: 1rem;
   }
+
+  .content > div[style*="display: grid"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 
@@ -269,7 +273,13 @@ body {
   th, td {
     padding: 0.45rem;
   }
+
+
+  .content > div[style*="display: grid"] {
+    grid-template-columns: 1fr !important;
+  }
 }
+
 .botao-roteiro {
   background-color: var(--cor-laranja);
   color: white;
@@ -369,7 +379,10 @@ body:has(details#toggleTema[open]) {
   text-decoration: underline;
 }
 
+
+
 </style>
+
 
 </head>
 
@@ -512,77 +525,102 @@ body:has(details#toggleTema[open]) {
 
   <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
 
-    <div class="card">
-      <img src="cultura.png" alt="Teatro" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Teatro</div>
-      <div class="card-content">Preço: 10€ – 20€</div>
-    </div>
+   <a href="cultura.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="cultura.png" alt="Teatro" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Teatro</div>
+    <div class="card-content">Preço: 10€ – 20€</div>
+  </div>
+</a>
 
-    <div class="card">
-      <img src="bowling.png" alt="Bowling" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Bowling</div>
-      <div class="card-content">Preço: 5€ – 8€</div>
-    </div>
 
-    <div class="card">
-      <img src="carreiros.png" alt="Carreiros do Monte" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Carreiros do Monte</div>
-      <div class="card-content">Preço: 27,50€</div>
-    </div>
+   <a href="desportos.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="bowling.png" alt="Bowling" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Bowling</div>
+    <div class="card-content">Preço: 5€ – 8€</div>
+  </div>
+</a>
 
-    <div class="card">
-      <img src="padel.png" alt="Padel" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Padel</div>
-      <div class="card-content">Preço: 12€ – 20€</div>
-    </div>
+<a href="capital_fazer.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="carreiros.png" alt="Carreiros do Monte" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Carreiros do Monte</div>
+    <div class="card-content">Preço: 27,50€</div>
+  </div>
+</a>
 
-    <div class="card">
-      <img src="parapente.png" alt="Parapente" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Parapente</div>
-      <div class="card-content">Preço: 90€ – 120€</div>
-    </div>
+<a href="desportos.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="padel.png" alt="Padel" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Padel</div>
+    <div class="card-content">Preço: 12€ – 20€</div>
+  </div>
+</a>
 
-    <div class="card">
-      <img src="4x4.png" alt="Passeio 4x4" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Passeio 4x4</div>
-      <div class="card-content">Preço: 35€ – 50€</div>
-    </div>
+<a href="melhores_experiencias.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="parapente.png" alt="Parapente" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Parapente</div>
+    <div class="card-content">Preço: 90€ – 120€</div>
+  </div>
+</a>
 
-    <div class="card">
-      <img src="levadas.png" alt="Levada – 25 Fontes" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Levada – 25 Fontes</div>
-      <div class="card-content">Preço: Gratuito</div>
-    </div>
+<a href="melhores_experiencias.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="4x4.png" alt="Passeio 4x4" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Passeio 4x4</div>
+    <div class="card-content">Preço: 35€ – 50€</div>
+  </div>
+</a>
 
-    <div class="card">
-      <img src="golfinho.png" alt="Observação de Golfinhos" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Observação de Golfinhos</div>
-      <div class="card-content">Preço: 35€ – 45€</div>
-    </div>
+<a href="trilhos_levadas.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="levadas.png" alt="Levada – 25 Fontes" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Levada – 25 Fontes</div>
+    <div class="card-content">Preço: Gratuito</div>
+  </div>
+</a>
 
-    <div class="card">
-      <img src="picodoariero.png" alt="Pico do Areeiro" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Pico do Areeiro</div>
-      <div class="card-content">Preço: Gratuito</div>
-    </div>
+<a href="melhores_experiencias.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="golfinho.png" alt="Observação de Golfinhos" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Observação de Golfinhos</div>
+    <div class="card-content">Preço: 35€ – 45€</div>
+  </div>
+</a>
 
-    <div class="card">
-      <img src="cabogirao.png" alt="Cabo Girão" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Cabo Girão</div>
-      <div class="card-content">Preço: Gratuito</div>
-    </div>
+<a href="atracoes.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="picodoariero.png" alt="Pico do Areeiro" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Pico do Areeiro</div>
+    <div class="card-content">Preço: Gratuito</div>
+  </div>
+</a>
 
-    <div class="card">
-      <img src="mercadolavradores.png" alt="Mercado dos Lavradores" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Mercado dos Lavradores</div>
-      <div class="card-content">Preço: Entrada gratuita</div>
-    </div>
+<a href="atracoes.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="cabogirao.png" alt="Cabo Girão" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Cabo Girão</div>
+    <div class="card-content">Preço: Gratuito</div>
+  </div>
+</a>
 
-    <div class="card">
-      <img src="portosanto.png" alt="Porto Santo" style="width: 100%; border-radius: 6px;">
-      <div class="card-title">Porto Santo</div>
-      <div class="card-content">Preço: 50€ – 60€</div>
-    </div>
+<a href="atracoes.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="mercadolavradores.png" alt="Mercado dos Lavradores" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Mercado dos Lavradores</div>
+    <div class="card-content">Preço: Entrada gratuita</div>
+  </div>
+</a>
+
+<a href="porto_santo_fazer.html" style="text-decoration: none; color: inherit;">
+  <div class="card">
+    <img src="portosanto.png" alt="Porto Santo" style="width: 100%; border-radius: 6px;">
+    <div class="card-title">Porto Santo</div>
+    <div class="card-content">Preço: 50€ – 60€</div>
+  </div>
+</a>
 
   </div>
 
