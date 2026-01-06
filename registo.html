@@ -15,7 +15,14 @@
   --cor-verde: #198754;
   --cor-vermelho: #dc3545;
   --cor-laranja: #ffa500;
+
+  --bg: #ffffff;
+  --texto: #333333;
+  --card-bg: #ffffff;
+  --menu-bg: #6c757d;
+  --borda: #dddddd;
 }
+
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -96,6 +103,17 @@ body {
 
 .btn-login:hover {
     background-color: #f2f2f2;
+}
+
+.header-btn { background-color: var(--cor-cinzento); color: var(--cor-secundaria); border: 1px solid var(--cor-secundaria); padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; list-style: none; transition: background-color 0.3s; } .header-btn:hover { background-color: var(--cor-laranja); }
+
+body:has(details#toggleTema[open]) {
+  --bg: #121212;
+  --texto: #e6e6e6;
+  --card-bg: #1e1e1e;
+  --menu-bg: #2a2a2a;
+  --borda: #444444;
+  --cor-cinzento: #999999;
 }
 
 </style>

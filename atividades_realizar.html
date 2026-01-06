@@ -15,18 +15,26 @@
   --cor-verde: #198754;
   --cor-vermelho: #dc3545;
   --cor-laranja: #ffa500;
+
+  --bg: #ffffff;
+  --texto: #333333;
+  --card-bg: #ffffff;
+  --menu-bg: #6c757d;
+  --borda: #dddddd;
 }
+
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-  background-color: var(--cor-secundaria);
+  font-family: 'Segoe UI','Roboto','Open Sans',sans-serif;
+  background-color: var(--bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: #333;
+  color: var(--texto);
 }
+
 
 .header {
   background: linear-gradient(90deg, var(--cor-laranja), #ffa500);
@@ -70,10 +78,11 @@ body {
 
 .menu {
   width: 240px;
-  background-color: var(--cor-cinzento);
+  background-color: var(--menu-bg);
   padding-top: 20px;
   flex-shrink: 0;
 }
+
 
 .menu ul { list-style: none; }
 .menu li { position: relative; }
@@ -96,7 +105,7 @@ body {
   display: none;
   position: absolute;
   top: 0; left: 100%;
-  background-color: var(--cor-secundaria);
+  background-color: var(--card-bg);
   min-width: 220px;
   box-shadow: 2px 0 8px rgba(0,0,0,0.1);
   z-index: 10;
@@ -108,9 +117,13 @@ body {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: var(--cor-laranja);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background-color: var(--card-bg);
+  color: var(--texto);
+  border-bottom: 1px solid var(--borda);
 }
+
+
+
 
 .menu li ul li a:hover {
   background-color: var(--cor-laranja);
@@ -124,9 +137,11 @@ body {
   flex: 1;
   padding: 1.5rem;
   overflow-y: auto;
-  background-color: var(--cor-secundaria);
+  background-color: var(--bg);
+  color: var(--texto);
   min-width: 0;
 }
+
 
 .main-grid {
   display: grid;
@@ -136,12 +151,19 @@ body {
 }
 
 .card {
-  background-color: var(--cor-secundaria);
-  border: 1px solid #ddd;
+  background-color: var(--card-bg);
+  border: 1px solid var(--borda);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  color: var(--texto);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
+
+
+
 
 .card-title {
   font-size: 1rem;
@@ -149,13 +171,19 @@ body {
   margin-bottom: 0.75rem;
   color: var(--cor-laranja);
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--borda);
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.card-content { font-size: 0.9rem; color: #666; }
+
+.card-content {
+  font-size: 0.9rem;
+  color: var(--texto);
+}
+
+
 
 .warning-icon { font-size: 1.1rem; color: var(--cor-laranja); }
 
@@ -249,18 +277,24 @@ body {
 }
 
 .atividades-marcadas {
-  background: var(--cor-secundaria);
-  border: 1px solid #ddd;
+  background: var(--card-bg);
+  border: 1px solid var(--borda);
   padding: 2rem;
   border-radius: 12px;
   max-width: 800px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  color: var(--texto);
 }
+
+
 
 .marcada-item {
   padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--borda);
 }
+
+
+
 
 .marcada-item:last-child {
   border-bottom: none;
@@ -279,6 +313,7 @@ body {
 .marcada-data {
   font-size: 0.9rem;
   opacity: 0.7;
+  color: var(--texto);
 }
 .atividade-img {
   width: 50px;
@@ -287,7 +322,87 @@ body {
   object-fit: cover;
 }
 
+.header-btn { background-color: var(--cor-cinzento); color: var(--cor-secundaria); border: 1px solid var(--cor-secundaria); padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; list-style: none; transition: background-color 0.3s; } .header-btn:hover { background-color: var(--cor-laranja); }
 
+body:has(details#toggleTema[open]) {
+  --bg: #121212;
+  --texto: #e6e6e6;
+  --card-bg: #1e1e1e;
+  --menu-bg: #2a2a2a;
+  --borda: #444444;
+  --cor-cinzento: #999999;
+}
+
+.footer {
+  background-color: var(--card-bg);
+  padding: 32px;
+  font-size: 13px;
+  color: var(--texto);
+  border-top: 1px solid var(--borda);
+  margin-top: 2rem;
+}
+
+.footer-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.footer-slogan {
+  font-size: 12px;
+  color: var(--texto);
+  opacity: 0.7;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-title {
+  color: var(--cor-laranja);
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: var(--texto);
+  opacity: 0.85;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--texto);
+  opacity: 0.8;
+}
+
+.footer-link {
+  color: var(--cor-terciaria);
+  text-decoration: underline;
+}
 
 </style>
 
@@ -306,6 +421,10 @@ body {
 
 
 <div class="header-right">
+  <details id="toggleTema">
+  <summary class="header-btn">Tema</summary>
+</details>
+
   <select class="language-selector">
     <option>PT | EN</option>
   </select>
@@ -410,7 +529,7 @@ body {
   </ul>
 </nav>
 
-<main class="content" style="padding: 2rem;">
+<main class="content">
 
   <h2 class="titulo-pagina">Atividades a Realizar</h2>
 
@@ -515,42 +634,37 @@ body {
 
 
 </div>
-<footer style="background-color: #f0f0f0; padding: 32px; font-size: 13px; color: #333; border-top: 1px solid #ccc;">
-  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: start;">
-
+<footer class="footer">
+  <div class="footer-top">
     <div>
-      <img src="logo.png.png" alt="TravelX" style="width: 120px; margin-bottom: 1rem;">
-      <div style="font-size: 12px; color: #666;">Madeira. Tão tua.</div>
+      <img src="logo.png.png" alt="TravelX" class="footer-logo">
+      <div class="footer-slogan">Madeira. Tão tua.</div>
     </div>
 
-    <div style="display: flex; flex-direction: row; gap: 4rem;">
-      <div style="display: flex; flex-direction: column; gap: 6px;">
-        <strong style="color: var(--cor-laranja);">Explorar</strong>
-        <a href="layout.html" style="text-decoration: none; color: #333;">Experiências</a>
+    <div class="footer-links">
+      <div class="footer-col">
+        <strong class="footer-title">Explorar</strong>
+        <a href="layout.html">Experiências</a>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: 6px;">
-        <strong style="color: var(--cor-laranja);">Informações</strong>
-        <a href="ajuda.html" style="text-decoration: none; color: #333;">Contactos</a>
-        <a href="privacidade.html" style="text-decoration: none; color: #333;">Privacidade</a>
+      <div class="footer-col">
+        <strong class="footer-title">Informações</strong>
+        <a href="ajuda.html">Contactos</a>
+        <a href="privacidade.html">Privacidade</a>
       </div>
     </div>
-
   </div>
 
-  <div style="max-width: 1200px; margin: 2rem auto 0; display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: #666;">
+  <div class="footer-bottom">
     <div>
       © TravelX – Plataforma de experiências na Madeira |
-      <a href="privacidade.html" style="color: #003d7a; text-decoration: underline;">Proteção de Dados e Termos de Utilização</a>
+      <a href="privacidade.html" class="footer-link">Proteção de Dados e Termos de Utilização</a>
     </div>
-    <div>
-      Câmara de Lobos, 9300-081 Madeira | Tel: +351 291 000000
-    </div>
-    <div>
-      Processado em 0.07 segundos – powered by TravelX engine
-    </div>
+    <div>Câmara de Lobos, 9300-081 Madeira | Tel: +351 291 000000</div>
+    <div>Processado em 0.07 segundos – powered by TravelX engine</div>
   </div>
 </footer>
+
 
 
 </body>
